@@ -5,7 +5,7 @@ This repository collects code, templates and examples that help teams in Digdir 
 
 ---
 
-## 🎯 What is this repo for?
+## What is this repo for?
 
 This repo exists to:
 
@@ -18,7 +18,7 @@ You don’t need to be an AI expert to use this repo.
 
 ---
 
-## 👥 Who is it for?
+## Who is it for?
 
 - **Developers** – who want code examples, patterns and reference implementations  
 - **Product owners / designers** – who want to understand what is possible and how to start small  
@@ -27,7 +27,7 @@ You don’t need to be an AI expert to use this repo.
 
 ---
 
-## 📂 What you’ll find here
+## What you’ll find here
 
 The exact structure will evolve, but you can expect folders like:
 
@@ -44,7 +44,7 @@ Check the folder `README` files for more details.
 
 ---
 
-## 🚀 Getting started
+##  Getting started
 
 1. **Browse the examples**  
    Go to `examples/` and find something close to what you want to do.
@@ -63,7 +63,7 @@ Check the folder `README` files for more details.
 
 ---
 
-## 🛡 Responsible use of AI
+##  Responsible use of AI
 
 All work in this repo should:
 
@@ -76,7 +76,7 @@ If you see something that does **not** follow this, please raise an issue or con
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We want this repo to be a **shared toolbox** for BOD.
 
@@ -94,7 +94,7 @@ Please:
 
 ---
 
-## 📫 Contact
+## Contact
 
 If you want help with an AI idea, or are unsure how to use anything here:
 
