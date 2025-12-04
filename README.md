@@ -1,7 +1,7 @@
 # KITT – AI Enablement for BOD
 
 KITT is an AI enabler team in BOD.  
-This repository collects code, templates and examples that help teams in Digdir experiment with and use AI **safely, practically and in line with our policies**.
+This repository collects code, templates and examples that help teams in BOD experiment with and use AI **safely, practically and in line with our policies**.
 
 ---
 
