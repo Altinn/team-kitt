@@ -31,6 +31,8 @@ You don’t need to be an AI expert to use this repo.
 
 The exact structure will evolve, but you can expect folders like:
 
+- `projects/` – Full-scale AI projects and prototypes
+  - e.g. Arielle (Full Stack FastAPI)
 - `examples/` – Small, focused AI examples  
   - e.g. simple RAG demos, agents with tools, prompt patterns
 - `templates/` – Starter kits and boilerplates  
