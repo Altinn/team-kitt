@@ -1,0 +1,32 @@
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby/Bundler files
+vendor/
+.bundle/
+Gemfile.lock
+
+# macOS files
+.DS_Store
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+
+# Node modules (if using npm for anything)
+node_modules/
+
+# Environment variables
+.env
+awesome-cop-*.md
+# ARIELLE draft working documents
+ARIELLE-v0.1-draft.md
+ARIELLE-evolution-guide.md
+
+
+# APM dependencies
+apm_modules/

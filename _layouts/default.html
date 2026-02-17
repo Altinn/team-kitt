@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    <div class="digdir-accent-bar" aria-hidden="true"></div>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    {%- include header.html -%}
+
+    <main id="main-content" class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+    <!-- Mermaid.js support -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'base',
+          themeVariables: {
+            primaryColor: '#0062B8',
+            primaryTextColor: '#1E2B3C',
+            primaryBorderColor: '#ced4da',
+            lineColor: '#65707D',
+            secondaryColor: '#f5f7f9',
+            tertiaryColor: '#ffffff',
+            background: '#ffffff',
+            secondaryBackground: '#f5f7f9',
+            tertiaryBackground: '#ffffff',
+            primaryButtonBackground: '#0062B8',
+            primaryButtonTextColor: '#ffffff',
+            primaryButtonBorder: '#004F94',
+            primaryButtonActiveBackground: '#004F94',
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+            fontSize: '14px'
+          },
+          flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true,
+            curve: 'basis'
+          }
+        });
+        
+        // Force re-render of any mermaid elements
+        const mermaidElements = document.querySelectorAll('.language-mermaid');
+        mermaidElements.forEach(function(element) {
+          const parent = element.parentElement;
+          const mermaidDiv = document.createElement('div');
+          mermaidDiv.className = 'mermaid';
+          mermaidDiv.textContent = element.textContent;
+          parent.replaceChild(mermaidDiv, element);
+        });
+        
+        // Re-initialize mermaid after DOM manipulation
+        mermaid.init(undefined, '.mermaid');
+      });
+    </script>
+
+  </body>
+
+</html>

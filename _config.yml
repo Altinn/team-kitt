@@ -1,0 +1,95 @@
+# Site settings
+title: "KITT"
+description: "KI Tilretteleggingsteam i Digdir – trygg, enkel og verdiskapende bruk av kunstig intelligens."
+baseurl: "/team-kitt"
+url: "https://Altinn.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Kramdown settings for better HTML/Markdown mixing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation structure
+navigation:
+  - title: "ARIELLE-spesifikasjonen"
+    url: "docs/arielle/index.md"
+  - title: "Praksis"
+    url: "docs/concepts/index.md"
+  - title: "Kom i gang"
+    url: "docs/getting-started/index.md"
+  - title: "Verktøy"
+    url: "docs/tooling/index.md"
+  - title: "Agentdelegering"
+    url: "docs/agent-delegation/index.md"
+  - title: "Teamadopsjon"
+    url: "docs/team-adoption/index.md"
+  - title: "Referanse"
+    url: "docs/reference/index.md"
+
+header_pages:
+  - docs/arielle/index.md
+  - docs/concepts/index.md
+  - docs/getting-started/index.md
+  - docs/tooling/index.md
+  - docs/agent-delegation/index.md
+  - docs/team-adoption/index.md
+  - docs/reference/index.md
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Collections
+collections:
+  examples:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "docs"
+      type: "pages"
+    values:
+      layout: "page"
+      nav_order: 1
+  - scope:
+      path: "_examples"
+      type: "examples"
+    values:
+      layout: "page"
+
+# SEO and social
+author: "Adi Dahl"
+social:
+  name: Adi Dahl
+  links:
+    - https://github.com/AdiDahl
+    - https://www.linkedin.com/in/adi-dahl/
+
+
