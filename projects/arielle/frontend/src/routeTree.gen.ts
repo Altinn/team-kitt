@@ -15,9 +15,18 @@ import { Route as RecoverPasswordRouteImport } from './routes/recover-password'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as LayoutRouteImport } from './routes/_layout'
 import { Route as LayoutIndexRouteImport } from './routes/_layout/index'
+import { Route as STokenRouteImport } from './routes/s/$token'
+import { Route as LayoutToolsRouteImport } from './routes/_layout/tools'
+import { Route as LayoutSurveysRouteImport } from './routes/_layout/surveys'
 import { Route as LayoutSettingsRouteImport } from './routes/_layout/settings'
 import { Route as LayoutItemsRouteImport } from './routes/_layout/items'
 import { Route as LayoutAdminRouteImport } from './routes/_layout/admin'
+import { Route as STokenIndexRouteImport } from './routes/s/$token.index'
+import { Route as LayoutSurveysIndexRouteImport } from './routes/_layout/surveys.index'
+import { Route as STokenFillRouteImport } from './routes/s/$token.fill'
+import { Route as STokenDoneRouteImport } from './routes/s/$token.done'
+import { Route as LayoutSurveysIdRouteImport } from './routes/_layout/surveys.$id'
+import { Route as LayoutDepartmentIdRouteImport } from './routes/_layout/department.$id'
 
 const SignupRoute = SignupRouteImport.update({
   id: '/signup',
@@ -48,6 +57,21 @@ const LayoutIndexRoute = LayoutIndexRouteImport.update({
   path: '/',
   getParentRoute: () => LayoutRoute,
 } as any)
+const STokenRoute = STokenRouteImport.update({
+  id: '/s/$token',
+  path: '/s/$token',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LayoutToolsRoute = LayoutToolsRouteImport.update({
+  id: '/tools',
+  path: '/tools',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutSurveysRoute = LayoutSurveysRouteImport.update({
+  id: '/surveys',
+  path: '/surveys',
+  getParentRoute: () => LayoutRoute,
+} as any)
 const LayoutSettingsRoute = LayoutSettingsRouteImport.update({
   id: '/settings',
   path: '/settings',
@@ -63,8 +87,39 @@ const LayoutAdminRoute = LayoutAdminRouteImport.update({
   path: '/admin',
   getParentRoute: () => LayoutRoute,
 } as any)
+const STokenIndexRoute = STokenIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => STokenRoute,
+} as any)
+const LayoutSurveysIndexRoute = LayoutSurveysIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LayoutSurveysRoute,
+} as any)
+const STokenFillRoute = STokenFillRouteImport.update({
+  id: '/fill',
+  path: '/fill',
+  getParentRoute: () => STokenRoute,
+} as any)
+const STokenDoneRoute = STokenDoneRouteImport.update({
+  id: '/done',
+  path: '/done',
+  getParentRoute: () => STokenRoute,
+} as any)
+const LayoutSurveysIdRoute = LayoutSurveysIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => LayoutSurveysRoute,
+} as any)
+const LayoutDepartmentIdRoute = LayoutDepartmentIdRouteImport.update({
+  id: '/department/$id',
+  path: '/department/$id',
+  getParentRoute: () => LayoutRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
+  '/': typeof LayoutIndexRoute
   '/login': typeof LoginRoute
   '/recover-password': typeof RecoverPasswordRoute
   '/reset-password': typeof ResetPasswordRoute
@@ -72,7 +127,15 @@ export interface FileRoutesByFullPath {
   '/admin': typeof LayoutAdminRoute
   '/items': typeof LayoutItemsRoute
   '/settings': typeof LayoutSettingsRoute
-  '/': typeof LayoutIndexRoute
+  '/surveys': typeof LayoutSurveysRouteWithChildren
+  '/tools': typeof LayoutToolsRoute
+  '/s/$token': typeof STokenRouteWithChildren
+  '/department/$id': typeof LayoutDepartmentIdRoute
+  '/surveys/$id': typeof LayoutSurveysIdRoute
+  '/s/$token/done': typeof STokenDoneRoute
+  '/s/$token/fill': typeof STokenFillRoute
+  '/surveys/': typeof LayoutSurveysIndexRoute
+  '/s/$token/': typeof STokenIndexRoute
 }
 export interface FileRoutesByTo {
   '/login': typeof LoginRoute
@@ -82,7 +145,14 @@ export interface FileRoutesByTo {
   '/admin': typeof LayoutAdminRoute
   '/items': typeof LayoutItemsRoute
   '/settings': typeof LayoutSettingsRoute
+  '/tools': typeof LayoutToolsRoute
   '/': typeof LayoutIndexRoute
+  '/department/$id': typeof LayoutDepartmentIdRoute
+  '/surveys/$id': typeof LayoutSurveysIdRoute
+  '/s/$token/done': typeof STokenDoneRoute
+  '/s/$token/fill': typeof STokenFillRoute
+  '/surveys': typeof LayoutSurveysIndexRoute
+  '/s/$token': typeof STokenIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -94,11 +164,21 @@ export interface FileRoutesById {
   '/_layout/admin': typeof LayoutAdminRoute
   '/_layout/items': typeof LayoutItemsRoute
   '/_layout/settings': typeof LayoutSettingsRoute
+  '/_layout/surveys': typeof LayoutSurveysRouteWithChildren
+  '/_layout/tools': typeof LayoutToolsRoute
+  '/s/$token': typeof STokenRouteWithChildren
   '/_layout/': typeof LayoutIndexRoute
+  '/_layout/department/$id': typeof LayoutDepartmentIdRoute
+  '/_layout/surveys/$id': typeof LayoutSurveysIdRoute
+  '/s/$token/done': typeof STokenDoneRoute
+  '/s/$token/fill': typeof STokenFillRoute
+  '/_layout/surveys/': typeof LayoutSurveysIndexRoute
+  '/s/$token/': typeof STokenIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
+    | '/'
     | '/login'
     | '/recover-password'
     | '/reset-password'
@@ -106,7 +186,15 @@ export interface FileRouteTypes {
     | '/admin'
     | '/items'
     | '/settings'
-    | '/'
+    | '/surveys'
+    | '/tools'
+    | '/s/$token'
+    | '/department/$id'
+    | '/surveys/$id'
+    | '/s/$token/done'
+    | '/s/$token/fill'
+    | '/surveys/'
+    | '/s/$token/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/login'
@@ -116,7 +204,14 @@ export interface FileRouteTypes {
     | '/admin'
     | '/items'
     | '/settings'
+    | '/tools'
     | '/'
+    | '/department/$id'
+    | '/surveys/$id'
+    | '/s/$token/done'
+    | '/s/$token/fill'
+    | '/surveys'
+    | '/s/$token'
   id:
     | '__root__'
     | '/_layout'
@@ -127,7 +222,16 @@ export interface FileRouteTypes {
     | '/_layout/admin'
     | '/_layout/items'
     | '/_layout/settings'
+    | '/_layout/surveys'
+    | '/_layout/tools'
+    | '/s/$token'
     | '/_layout/'
+    | '/_layout/department/$id'
+    | '/_layout/surveys/$id'
+    | '/s/$token/done'
+    | '/s/$token/fill'
+    | '/_layout/surveys/'
+    | '/s/$token/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -136,6 +240,7 @@ export interface RootRouteChildren {
   RecoverPasswordRoute: typeof RecoverPasswordRoute
   ResetPasswordRoute: typeof ResetPasswordRoute
   SignupRoute: typeof SignupRoute
+  STokenRoute: typeof STokenRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -171,7 +276,7 @@ declare module '@tanstack/react-router' {
     '/_layout': {
       id: '/_layout'
       path: ''
-      fullPath: ''
+      fullPath: '/'
       preLoaderRoute: typeof LayoutRouteImport
       parentRoute: typeof rootRouteImport
     }
@@ -180,6 +285,27 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof LayoutIndexRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/s/$token': {
+      id: '/s/$token'
+      path: '/s/$token'
+      fullPath: '/s/$token'
+      preLoaderRoute: typeof STokenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_layout/tools': {
+      id: '/_layout/tools'
+      path: '/tools'
+      fullPath: '/tools'
+      preLoaderRoute: typeof LayoutToolsRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/surveys': {
+      id: '/_layout/surveys'
+      path: '/surveys'
+      fullPath: '/surveys'
+      preLoaderRoute: typeof LayoutSurveysRouteImport
       parentRoute: typeof LayoutRoute
     }
     '/_layout/settings': {
@@ -203,25 +329,102 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutAdminRouteImport
       parentRoute: typeof LayoutRoute
     }
+    '/s/$token/': {
+      id: '/s/$token/'
+      path: '/'
+      fullPath: '/s/$token/'
+      preLoaderRoute: typeof STokenIndexRouteImport
+      parentRoute: typeof STokenRoute
+    }
+    '/_layout/surveys/': {
+      id: '/_layout/surveys/'
+      path: '/'
+      fullPath: '/surveys/'
+      preLoaderRoute: typeof LayoutSurveysIndexRouteImport
+      parentRoute: typeof LayoutSurveysRoute
+    }
+    '/s/$token/fill': {
+      id: '/s/$token/fill'
+      path: '/fill'
+      fullPath: '/s/$token/fill'
+      preLoaderRoute: typeof STokenFillRouteImport
+      parentRoute: typeof STokenRoute
+    }
+    '/s/$token/done': {
+      id: '/s/$token/done'
+      path: '/done'
+      fullPath: '/s/$token/done'
+      preLoaderRoute: typeof STokenDoneRouteImport
+      parentRoute: typeof STokenRoute
+    }
+    '/_layout/surveys/$id': {
+      id: '/_layout/surveys/$id'
+      path: '/$id'
+      fullPath: '/surveys/$id'
+      preLoaderRoute: typeof LayoutSurveysIdRouteImport
+      parentRoute: typeof LayoutSurveysRoute
+    }
+    '/_layout/department/$id': {
+      id: '/_layout/department/$id'
+      path: '/department/$id'
+      fullPath: '/department/$id'
+      preLoaderRoute: typeof LayoutDepartmentIdRouteImport
+      parentRoute: typeof LayoutRoute
+    }
   }
 }
+
+interface LayoutSurveysRouteChildren {
+  LayoutSurveysIdRoute: typeof LayoutSurveysIdRoute
+  LayoutSurveysIndexRoute: typeof LayoutSurveysIndexRoute
+}
+
+const LayoutSurveysRouteChildren: LayoutSurveysRouteChildren = {
+  LayoutSurveysIdRoute: LayoutSurveysIdRoute,
+  LayoutSurveysIndexRoute: LayoutSurveysIndexRoute,
+}
+
+const LayoutSurveysRouteWithChildren = LayoutSurveysRoute._addFileChildren(
+  LayoutSurveysRouteChildren,
+)
 
 interface LayoutRouteChildren {
   LayoutAdminRoute: typeof LayoutAdminRoute
   LayoutItemsRoute: typeof LayoutItemsRoute
   LayoutSettingsRoute: typeof LayoutSettingsRoute
+  LayoutSurveysRoute: typeof LayoutSurveysRouteWithChildren
+  LayoutToolsRoute: typeof LayoutToolsRoute
   LayoutIndexRoute: typeof LayoutIndexRoute
+  LayoutDepartmentIdRoute: typeof LayoutDepartmentIdRoute
 }
 
 const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutAdminRoute: LayoutAdminRoute,
   LayoutItemsRoute: LayoutItemsRoute,
   LayoutSettingsRoute: LayoutSettingsRoute,
+  LayoutSurveysRoute: LayoutSurveysRouteWithChildren,
+  LayoutToolsRoute: LayoutToolsRoute,
   LayoutIndexRoute: LayoutIndexRoute,
+  LayoutDepartmentIdRoute: LayoutDepartmentIdRoute,
 }
 
 const LayoutRouteWithChildren =
   LayoutRoute._addFileChildren(LayoutRouteChildren)
+
+interface STokenRouteChildren {
+  STokenDoneRoute: typeof STokenDoneRoute
+  STokenFillRoute: typeof STokenFillRoute
+  STokenIndexRoute: typeof STokenIndexRoute
+}
+
+const STokenRouteChildren: STokenRouteChildren = {
+  STokenDoneRoute: STokenDoneRoute,
+  STokenFillRoute: STokenFillRoute,
+  STokenIndexRoute: STokenIndexRoute,
+}
+
+const STokenRouteWithChildren =
+  STokenRoute._addFileChildren(STokenRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   LayoutRoute: LayoutRouteWithChildren,
@@ -229,6 +432,7 @@ const rootRouteChildren: RootRouteChildren = {
   RecoverPasswordRoute: RecoverPasswordRoute,
   ResetPasswordRoute: ResetPasswordRoute,
   SignupRoute: SignupRoute,
+  STokenRoute: STokenRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
