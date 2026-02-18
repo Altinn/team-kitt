@@ -43,6 +43,11 @@ ref: home
       <a href="docs/team-adoption/" class="guide-link">Les om adopsjon</a>
     </div>
     <div class="guide-card">
+      <h3 class="guide-title">AI Champions</h3>
+      <p class="guide-description">Rolla som skapar varig adopsjon og byggjer nettverk for praktisk AI-bruk.</p>
+      <a href="docs/ai-champions/" class="guide-link">Les om Champions</a>
+    </div>
+    <div class="guide-card">
       <h3 class="guide-title">Døme</h3>
       <p class="guide-description">Praktiske døme på prompts, skills og arbeidsflytar.</p>
       <a href="docs/examples/" class="guide-link">Sjå døme</a>

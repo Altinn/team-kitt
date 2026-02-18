@@ -45,6 +45,11 @@ redirect_from:
       <a href="docs/team-adoption/" class="guide-link">Les om adopsjon</a>
     </div>
     <div class="guide-card">
+      <h3 class="guide-title">AI Champions</h3>
+      <p class="guide-description">Rollen som skaper varig adopsjon og bygger nettverk for praktisk AI-bruk.</p>
+      <a href="docs/ai-champions/" class="guide-link">Les om Champions</a>
+    </div>
+    <div class="guide-card">
       <h3 class="guide-title">Eksempler</h3>
       <p class="guide-description">Praktiske eksempler på prompts, skills og arbeidsflyter.</p>
       <a href="docs/examples/" class="guide-link">Se eksempler</a>

@@ -43,6 +43,11 @@ ref: home
       <a href="docs/team-adoption/" class="guide-link">Read about adoption</a>
     </div>
     <div class="guide-card">
+      <h3 class="guide-title">AI Champions</h3>
+      <p class="guide-description">The role that makes adoption stick and grows a network for practical AI use.</p>
+      <a href="docs/ai-champions/" class="guide-link">Read about Champions</a>
+    </div>
+    <div class="guide-card">
       <h3 class="guide-title">Examples</h3>
       <p class="guide-description">Practical examples of prompts, skills, and workflows.</p>
       <a href="docs/examples/" class="guide-link">See examples</a>
