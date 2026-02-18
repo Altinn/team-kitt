@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% assign lang = page.lang | default: site.lang | default: "nb" %}
+<html lang="{{ lang }}">
 
   {%- include head.html -%}
 
@@ -7,7 +8,7 @@
 
     <div class="digdir-accent-bar" aria-hidden="true"></div>
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-content" class="skip-link">{{ site.data.i18n[lang].skip_link }}</a>
 
     {%- include header.html -%}
 
@@ -62,6 +63,21 @@
         
         // Re-initialize mermaid after DOM manipulation
         mermaid.init(undefined, '.mermaid');
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const hash = window.location.hash;
+        if (!hash) return;
+        document.querySelectorAll('.lang-link[data-same-ref="true"]').forEach(function(link) {
+          try {
+            const url = new URL(link.href);
+            url.hash = hash;
+            link.href = url.toString();
+          } catch (error) {
+            console.warn('Unable to append hash to language link:', link.href);
+          }
+        });
       });
     </script>
 

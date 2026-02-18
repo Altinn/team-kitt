@@ -3,6 +3,8 @@ title: "KITT"
 description: "KI Tilretteleggingsteam i Digdir – trygg, enkel og verdiskapende bruk av kunstig intelligens."
 baseurl: "/team-kitt"
 url: "https://Altinn.github.io"
+lang: "nb"
+languages: ["nb", "nn", "en"]
 
 # Build settings
 markdown: kramdown
@@ -25,6 +27,7 @@ kramdown:
 # Plugins
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-seo-tag
 
@@ -91,5 +94,4 @@ social:
   links:
     - https://github.com/AdiDahl
     - https://www.linkedin.com/in/adi-dahl/
-
 

@@ -1,7 +1,11 @@
 ---
 layout: home
 title: "KITT – KI Tilretteleggingsteam"
-permalink: /
+permalink: /nb/
+lang: nb
+ref: home
+redirect_from:
+  - /
 ---
 
 <div class="hero-section">

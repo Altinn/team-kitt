@@ -1,0 +1,50 @@
+nb:
+  skip_link: "Hopp til hovedinnhold"
+  github: "GitHub"
+  cta_guide: "Les veiledningen"
+  toggle_nav: "Åpne navigasjonsmeny"
+  close_nav: "Lukk navigasjonsmeny"
+  nav_label: "Dokumentasjonsnavigasjon"
+  lang_switcher_label: "Språk"
+  lang_short:
+    nb: "NB"
+    nn: "NN"
+    en: "EN"
+  lang_name:
+    nb: "Bokmål"
+    nn: "Nynorsk"
+    en: "English"
+
+nn:
+  skip_link: "Hopp til hovudinnhald"
+  github: "GitHub"
+  cta_guide: "Les rettleiinga"
+  toggle_nav: "Opne navigasjonsmeny"
+  close_nav: "Lukk navigasjonsmeny"
+  nav_label: "Dokumentasjonsnavigasjon"
+  lang_switcher_label: "Språk"
+  lang_short:
+    nb: "NB"
+    nn: "NN"
+    en: "EN"
+  lang_name:
+    nb: "Bokmål"
+    nn: "Nynorsk"
+    en: "English"
+
+en:
+  skip_link: "Skip to main content"
+  github: "GitHub"
+  cta_guide: "Read the guide"
+  toggle_nav: "Toggle navigation menu"
+  close_nav: "Close navigation menu"
+  nav_label: "Documentation navigation"
+  lang_switcher_label: "Language"
+  lang_short:
+    nb: "NB"
+    nn: "NN"
+    en: "EN"
+  lang_name:
+    nb: "Norwegian Bokmål"
+    nn: "Norwegian Nynorsk"
+    en: "English"

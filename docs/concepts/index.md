@@ -2,7 +2,11 @@
 layout: docs
 title: "Praksisen"
 display_title: "Praksisen"
-permalink: /docs/concepts/
+permalink: /nb/docs/concepts/
+lang: nb
+ref: docs-concepts
+redirect_from:
+  - /docs/concepts/
 nav_order: 2
 ---
 

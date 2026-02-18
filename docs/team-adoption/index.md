@@ -2,7 +2,11 @@
 layout: docs
 title: "Team og virksomhetsstørrelse"
 display_title: "Team og virksomhetsstørrelse"
-permalink: /docs/team-adoption/
+permalink: /nb/docs/team-adoption/
+lang: nb
+ref: docs-team-adoption
+redirect_from:
+  - /docs/team-adoption/
 nav_order: 6
 ---
 

@@ -2,7 +2,11 @@
 layout: docs
 title: "Verktøy"
 display_title: "Verktøy: Skalering av agentprimitiver"
-permalink: /docs/tooling/
+permalink: /nb/docs/tooling/
+lang: nb
+ref: docs-tooling
+redirect_from:
+  - /docs/tooling/
 nav_order: 4
 ---
 
@@ -12,7 +16,7 @@ Du har mestret [Praksisen](../concepts/) og forstår at agentprimitivene dine er
 
 Svaret speiler utviklingen i alle programmeringsøkosystemer. Akkurat som JavaScript gikk fra nettleserskript til behov for Node.js-kjøretider, pakkebehandlere og deployment-verktøy, trenger agentprimitivene dine tilsvarende infrastruktur for å nå sitt fulle potensial.
 
-## Naturlig språk som kode
+## Naturlig språk som kode {#natural-language-as-code}
 
 Agentprimitivene dine har alle kjennetegnene på profesjonell programvare: modularitet, gjenbruk, avhengigheter, versjonering og kontinuerlig utvikling. Dette er ikke bare en metafor - disse `.prompt.md`- og `.instructions.md`-filene representerer en reell ny form for programvareutvikling som fortjener ordentlig verktøystøtte.
 
@@ -26,7 +30,7 @@ Se hva som skjer når agentprimitivene dine modnes:
 
 Denne erkjennelsen endrer hvordan vi tenker om verktøy for AI-utvikling. Programmer i naturlig språk trenger den samme infrastrukturen som annen programvare.
 
-## Agent-CLI-kjøretider
+## Agent-CLI-kjøretider {#agent-cli-runtimes}
 
 De fleste utviklere lager og kjører agentprimitiver direkte i VS Code med GitHub Copilot - og det er perfekt for interaktiv utvikling, feilsøking og daglig forbedring av arbeidsflyter. Men akkurat som JavaScript til slutt trengte Node.js for å bryte fri fra nettleserbegrensninger, trenger programmer i naturlig språk **Agent CLI-kjøretider** for automatiserte og produksjonsscenarier.
 
@@ -41,7 +45,7 @@ Nøkkelinnsikten er å forstå når hvert miljø tjener deg best:
 
 Agent-CLI-kjøretider transformerer agentprimitivene dine fra IDE-bundne filer til **autonomt kjørbare arbeidsflyter** som kjører konsistent i alle miljøer. De gir kommandolinjekjøring, CI/CD-integrasjon, miljøkonsistens og innebygd støtte for MCP-servere - og binder utviklingsarbeid til produksjonsvirkelighet.
 
-## Kjøretidsadministrasjon
+## Kjøretidsadministrasjon {#runtime-management}
 
 Selv om VS Code + GitHub Copilot håndterer individuell utvikling perfekt, trenger team ekstra infrastruktur for å **dele, versjonere og produktifisere** agentprimitiver. Å administrere flere CLI-miljøer blir raskt komplekst - ulike installasjonsprosedyrer, konfigurasjonskrav og kompatibilitetsmatriser.
 
@@ -131,7 +135,7 @@ For små prosjekter (5-10 instruksjonsfiler) fungerer manuell `AGENTS.md`-organi
 
 **✅ Sjekkpunkt:** Kompilering skaper portabel, optimalisert kontekst som skalerer på tvers av agenter og prosjekter
 
-## Distribusjon og pakking
+## Distribusjon og pakking {#distribution-and-packaging}
 
 Når agentprimitivene dine viser seg å være verdifulle, vil du naturlig nok **dele dem med teamet** og etter hvert **ta dem i produksjon**. Det er her parallellene til tradisjonell programvareutvikling blir tydelige - du trenger pakkestyring, avhengighetsløsning, versjonskontroll og distribusjonsmekanismer.
 
@@ -187,7 +191,7 @@ Fordelene akkumuleres raskt: distribuer testede arbeidsflyter og instruksjoner s
 
 **✅ Sjekkpunkt:** Agentprimitivene dine er nå pakket som distribuerbar programvare med håndterte avhengigheter
 
-## Produksjonsutrulling
+## Produksjonsutrulling {#production-deployment}
 
 Den siste delen av verktøyøkosystemet muliggjør **Continuous AI** - automatisert kjøring av pakkede agentprimitiver i produksjonsmiljøer. De nøye utviklede arbeidsflytene kan nå kjøre automatisk i CI/CD-pipelines med samme pålitelighet som tradisjonell programvareutrulling.
 
@@ -233,7 +237,7 @@ Dette skaper produksjonsklare AI-arbeidsflyter med fleksibilitet i kjøretider, 
 
 **✅ Sjekkpunkt:** Agentprimitivene dine kjører nå automatisk i produksjon med samme pålitelighet som tradisjonell programvare
 
-## Økosystemutvikling
+## Økosystemutvikling {#ecosystem-evolution}
 
 Denne verktøyprogresjonen følger samme forutsigbare mønster som alle vellykkede programmeringsøkosystemer. Å forstå dette mønsteret hjelper deg å se hvor AI Native Development er på vei og hvordan du kan posisjonere arbeidet ditt strategisk.
 
@@ -246,7 +250,7 @@ Utviklingen skjer i fire steg:
 
 Akkurat som npm muliggjorde JavaScripts eksplosive vekst ved å løse pakkedistribusjonsproblemet, muliggjør [APM](https://github.com/microsoft/apm) at agentprimitiv-økosystemet blomstrer ved å tilby den manglende infrastrukturlaget som gjør deling og skalering av programmer i naturlig språk praktisk.
 
-## Nøkkelpunkter
+## Nøkkelpunkter {#key-takeaways}
 
 1. **Naturlig språk som kode** - Agentprimitivene dine er reell programvare som fortjener ordentlig verktøystøtte
 2. **Agent-CLI-kjøretider** muliggjør kjøring utenfor VS Code, spesielt for CI/CD og produksjon

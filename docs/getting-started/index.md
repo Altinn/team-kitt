@@ -2,7 +2,11 @@
 layout: docs
 title: "Kom i gang"
 display_title: "Kom i gang"
-permalink: /docs/getting-started/
+permalink: /nb/docs/getting-started/
+lang: nb
+ref: docs-getting-started
+redirect_from:
+  - /docs/getting-started/
 nav_order: 3
 ---
 
@@ -86,7 +90,7 @@ Generate code with:
 
 ## Konfigurasjon av tilpassede agenter {#b-chat-modes-configuration}
 
-Med instruksjonsarkitekturen på plass trenger du en måte å håndheve domenebgrenser og forhindre at AI-agenter trår utenfor sin ekspertise. Tilpassede agenter løser dette ved å etablere profesjonelle grenser, slik vi kjenner fra virkelige lisenser — arkitekter planlegger, men bygger ikke; ingeniører utfører, men setter ikke strategi.
+Med instruksjonsarkitekturen på plass trenger du en måte å håndheve domenebegrensninger og forhindre at AI-agenter trår utenfor sin ekspertise. Tilpassede agenter løser dette ved å etablere profesjonelle grenser, slik vi kjenner fra virkelige lisenser — arkitekter planlegger, men bygger ikke; ingeniører utfører, men setter ikke strategi.
 
 **✅ Hurtighandlinger:**
 - Definer domenespesifikke [tilpassede agenter](https://code.visualstudio.com/docs/copilot/customization/custom-agents) med MCP-verktøygrenser
@@ -303,7 +307,7 @@ npm install react-hook-form @hookform/resolvers zod
 
 ---
 
-## Hurtigstartsjekkliste
+## Hurtigstartsjekkliste {#quick-start-checklist}
 
 Med Skills og primitiver på plass har du nå et komplett fundament for systematisk AI-utvikling. Sjekklisten under guider deg gjennom implementeringsrekkefølgen.
 

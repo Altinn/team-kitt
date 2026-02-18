@@ -2,7 +2,11 @@
 layout: docs
 title: "Referanse"
 display_title: "Referanse"
-permalink: /docs/reference/
+permalink: /nb/docs/reference/
+lang: nb
+ref: docs-reference
+redirect_from:
+  - /docs/reference/
 nav_order: 7
 ---
 
@@ -19,7 +23,7 @@ Essensielle sjekklister, progresjonsrammeverk og dokumentasjonslenker for løpen
 4. **[ ]** Installer nyttige Skills for din stack: `apm install owner/skill-name` (Skills: umiddelbare kapabiliteter)
 5. **[ ]** Opprett [`.github/copilot-instructions.md`](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilot-instructionsmd-file) med grunnleggende prosjektretningslinjer (Context Engineering: globale regler)
 6. **[ ]** Sett opp domenespesifikke [`.instructions.md`-filer](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-instructionsmd-files) med `applyTo`-mønstre (Context Engineering: selektiv lasting)
-7. **[ ]** Konfigurer [tilpassede agenter](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-chat-modes) for domenene i teknologistakken (Context Engineering: domenebgrenser)
+7. **[ ]** Konfigurer [tilpassede agenter](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-chat-modes) for domenene i teknologistakken (Context Engineering: domenebegrensninger)
 8. **[ ]** Lag den første [`.prompt.md`-filen](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental) med valideringssjekkpunkter (Markdown Prompt Engineering: deterministiske maler)
 9. **[ ]** Bygg den første `.spec.md`-malen for funksjonsspesifikasjoner (Agent Primitive: deterministisk bro fra plan til implementering)
 10. **[ ]** Pakk gjenbrukbare mønstre som en Skill: `apm init skill` (Skills: deling av kunnskap)
@@ -170,7 +174,7 @@ Essensielle sjekklister, progresjonsrammeverk og dokumentasjonslenker for løpen
 ## Neste steg {#next-steps}
 
 ### Umiddelbare tiltak (Denne uken)
-1. Fullfør [Hurtigstartsjekklisten](#-hurtigstartsjekkliste)
+1. Fullfør [Hurtigstartsjekklisten](#quick-start-checklist)
 2. Velg læringssti fra [hovedguiden](../)
 3. Implementer din første Agent Primitive
 

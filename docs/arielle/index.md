@@ -2,7 +2,13 @@
 layout: docs
 title: "ARIELLE-spesifikasjonen"
 display_title: "ARIELLE: En arkitekturstil for AI-native utvikling"
-permalink: /docs/ARIELLE/
+permalink: /nb/docs/arielle/
+lang: nb
+ref: docs-arielle
+redirect_from:
+  - /docs/
+  - /docs/arielle/
+  - /docs/ARIELLE/
 nav_order: 1
 ---
 

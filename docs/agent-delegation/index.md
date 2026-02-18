@@ -2,7 +2,11 @@
 layout: docs
 title: "Agent-delegering"
 display_title: "Agent-delegering"
-permalink: /docs/agent-delegation/
+permalink: /nb/docs/agent-delegation/
+lang: nb
+ref: docs-agent-delegation
+redirect_from:
+  - /docs/agent-delegation/
 nav_order: 5
 ---
 
