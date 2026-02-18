@@ -25,17 +25,31 @@
 
       <!-- Language Switcher -->
       <div class="lang-switcher" aria-label="{{ site.data.i18n[lang].lang_switcher_label }}">
-        {% for code in site.languages %}
-          {% assign target = translations | where: "lang", code | first %}
-          {% if target %}
-            {% assign target_url = target.url | relative_url %}
-          {% else %}
-            {% assign target_url = ( '/' | append: code | append: '/' ) | relative_url %}
-          {% endif %}
-          <a class="lang-link {% if code == lang %}current{% endif %}" href="{{ target_url }}" data-lang="{{ code }}" title="{{ site.data.i18n[lang].lang_name[code] }}" {% if target %}data-same-ref="true"{% endif %}>
-            {{ site.data.i18n[lang].lang_short[code] }}
-          </a>
-        {% endfor %}
+        <details class="lang-dropdown">
+          <summary class="lang-summary">
+            <span class="lang-flag" aria-hidden="true">
+              {% include lang-flag.html code=lang %}
+            </span>
+            <span class="lang-current">{{ site.data.i18n[lang].lang_name[lang] }}</span>
+            <span class="lang-caret" aria-hidden="true"></span>
+          </summary>
+          <div class="lang-menu" role="menu">
+            {% for code in site.languages %}
+              {% assign target = translations | where: "lang", code | first %}
+              {% if target %}
+                {% assign target_url = target.url | relative_url %}
+              {% else %}
+                {% assign target_url = ( '/' | append: code | append: '/' ) | relative_url %}
+              {% endif %}
+              <a class="lang-link {% if code == lang %}current{% endif %}" href="{{ target_url }}" data-lang="{{ code }}" title="{{ site.data.i18n[lang].lang_name[code] }}" {% if target %}data-same-ref="true"{% endif %}{% if code == lang %} aria-current="true"{% endif %} role="menuitem">
+                <span class="lang-flag" aria-hidden="true">
+                  {% include lang-flag.html code=code %}
+                </span>
+                <span class="lang-name">{{ site.data.i18n[lang].lang_name[code] }}</span>
+              </a>
+            {% endfor %}
+          </div>
+        </details>
       </div>
             
       <!-- GitHub Link -->

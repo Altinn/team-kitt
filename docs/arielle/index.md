@@ -16,9 +16,29 @@ En ny disiplin er i emning. **AI-native utvikling** anerkjenner naturlig språk 
 
 Akkurat som kode ble mediet for å styre CPU-er, blir naturlig språk mediet for å styre språkmodeller. Men vi er i barndommen av denne overgangen. Som bransje mangler vi veiledning i hvordan vi gjør dette *bra*—pålitelig, i skala, for reelle prosjekter med reell kompleksitet.
 
-**ARIELLE** adresserer dette gapet. Den definerer en arkitekturstil for pålitelig, skalerbar samarbeid mellom mennesker og AI-kodeagenter. Som REST definerte begrensninger for distribuerte systemer uavhengig av HTTP, definerer ARIELLE begrensninger for AI-native utvikling uavhengig av enhver spesifikk modell eller plattform.
+**ARIELLE** står for **AI Regulation, Innovation, Enablement, Licensing, Legal & Ethics**. Den definerer en arkitekturstil for pålitelig, skalerbar samarbeid mellom mennesker og AI-kodeagenter—og er ment for hele teamet: utviklere, produkt, design, sikkerhet, juridisk, compliance og ledelse.
 
-## Hurtigreferanse
+ARIELLE er en **superset** av PROSE-prinsippene (Progressive Disclosure, Reduced Scope, Orchestrated Composition, Safety Boundaries, Explicit Hierarchy) slik de beskrives i *awesome-ai-native*-samlingen. Vi beholder de fem begrensningene, men utvider perspektivet til å inkludere regulering, lisensiering og etikk, slik at AI-native arbeid blir styrbart i organisasjoner—ikke bare i kode.
+
+Som REST definerte begrensninger for distribuerte systemer uavhengig av HTTP, definerer ARIELLE begrensninger for AI-native utvikling uavhengig av modell eller plattform. Den gir et felles språk på tvers av roller og gjør samarbeid, ansvar og kvalitet mer forutsigbart.
+
+## ARIELLE-domenene
+
+ARIELLE er mer enn en teknisk stil; det er et tverrfaglig rammeverk som gjør AI-arbeid styrbart. Domenene nedenfor fungerer som en sjekkliste for hele teamet:
+
+| Bokstav | Domene | Formål | Typiske spørsmål |
+|---------|--------|--------|------------------|
+| **A** | AI (kapabilitet og risiko) | Avklar hva AI egner seg til og hvor grensene går | «Hva bør agenten gjøre selv?» |
+| **R** | Regulering | Sikre etterlevelse av lover, standarder og sektor-krav | «Hvilke regler gjelder her?» |
+| **I** | Innovasjon | Utforske nye løsninger trygt og målrettet | «Hvor kan vi eksperimentere?» |
+| **E** | Enablement | Kompetanse, onboarding og arbeidsflyt i teamet | «Hvem trenger opplæring?» |
+| **L** | Lisensiering | Riktig bruk av data, modeller og kode | «Hvilke lisenser er tillatt?» |
+| **L** | Juridisk | Kontrakter, ansvar, IP og anskaffelser | «Hvem eier output?» |
+| **E** | Etikk | Rettferdighet, transparens og samfunnsansvar | «Er dette forsvarlig?» |
+
+## PROSE-kjernen (de fem begrensningene)
+
+ARIELLE bygger på PROSE-begrensningene som gjør AI-native arbeid robust i praksis:
 
 | Begrensning | Prinsipp | Indusert egenskap |
 |-------------|----------|-------------------|
@@ -27,6 +47,21 @@ Akkurat som kode ble mediet for å styre CPU-er, blir naturlig språk mediet for
 | **O** Orchestrert komposisjon | Enkle ting komponeres; komplekse ting bryter sammen | Fleksibilitet, gjenbrukbarhet |
 | **S** Sikkerhetsgrenser | Autonomi innenfor sikre rammer | Pålitelighet, sikkerhet, verifiserbarhet |
 | **E** Eksplisitt hierarki | Spesifisitet øker når omfanget innsnevres | Modularitet, arv |
+
+## Hvem ARIELLE er for
+
+ARIELLE er ment for alle som deltar i å levere AI-drevne løsninger:
+
+- **Utviklere og arkitekter** som trenger stabile arbeidsflyter og kvalitetsgarantier.
+- **Produkt og design** som må sikre verdi, brukeropplevelse og ansvarlighet.
+- **Juridisk og compliance** som vurderer risiko, lisens og regulatoriske krav.
+- **Ledelse** som skal sikre styring, ansvar og modenhet over tid.
+
+## Slik brukes ARIELLE
+
+1. **Start tverrfaglig.** Gå gjennom ARIELLE-domenene tidlig i prosjekter.
+2. **Bygg med PROSE-kjernen.** Bruk begrensningene til å strukturere arbeidsflyt og dokumentasjon.
+3. **Gjør ansvar eksplisitt.** Dokumenter beslutninger, eierskap og validering.
 
 ## Hva ARIELLE ikke er
 

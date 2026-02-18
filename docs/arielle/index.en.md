@@ -11,9 +11,29 @@ A new discipline is emerging. **AI-native development** recognizes natural langu
 
 Just as code became the medium for controlling CPUs, natural language is becoming the medium for controlling language models. But we are still in the early days of this transition. As an industry, we lack guidance on how to do this *well*—reliably, at scale, for real projects with real complexity.
 
-**ARIELLE** addresses this gap. It defines an architecture style for reliable, scalable collaboration between humans and AI coding agents. Just as REST defined constraints for distributed systems independent of HTTP, ARIELLE defines constraints for AI-native development independent of any specific model or platform.
+**ARIELLE** stands for **AI Regulation, Innovation, Enablement, Licensing, Legal & Ethics**. It defines an architecture style for reliable, scalable collaboration between humans and AI coding agents—and it is meant for the whole team: engineers, product, design, security, legal, compliance, and leadership.
 
-## Quick Reference
+ARIELLE is a **superset** of the PROSE principles (Progressive Disclosure, Reduced Scope, Orchestrated Composition, Safety Boundaries, Explicit Hierarchy) described in the *awesome-ai-native* collection. We keep the five constraints, but expand the lens to include regulation, licensing, and ethics, so AI-native work is governed at organizational scale—not just in code.
+
+Just as REST defined constraints for distributed systems independent of HTTP, ARIELLE defines constraints for AI-native development independent of any specific model or platform. It provides a shared language across roles and makes collaboration, accountability, and quality more predictable.
+
+## The ARIELLE Domains
+
+ARIELLE is more than a technical style; it is a cross-functional framework that makes AI work governable. The domains below act as a checklist for the whole team:
+
+| Letter | Domain | Purpose | Typical questions |
+|--------|--------|---------|-------------------|
+| **A** | AI (capability and risk) | Clarify what AI is suited for and where the limits are | “What should the agent do on its own?” |
+| **R** | Regulation | Ensure compliance with laws, standards, and sector rules | “Which regulations apply here?” |
+| **I** | Innovation | Explore new solutions safely and intentionally | “Where can we experiment?” |
+| **E** | Enablement | Skills, onboarding, and team workflow | “Who needs training?” |
+| **L** | Licensing | Proper use of data, models, and code | “Which licenses are allowed?” |
+| **L** | Legal | Contracts, liability, IP, procurement | “Who owns the output?” |
+| **E** | Ethics | Fairness, transparency, societal impact | “Is this responsible?” |
+
+## The PROSE Core (Five Constraints)
+
+ARIELLE builds on the PROSE constraints that make AI-native work robust in practice:
 
 | Constraint | Principle | Induced Property |
 |-------------|----------|-------------------|
@@ -22,6 +42,21 @@ Just as code became the medium for controlling CPUs, natural language is becomin
 | **O** Orchestrated composition | Simple things compose; complex things break down | Flexibility, reusability |
 | **S** Safety boundaries | Autonomy within safe limits | Reliability, safety, verifiability |
 | **E** Explicit hierarchy | Specificity increases as scope narrows | Modularity, inheritance |
+
+## Who ARIELLE Is For
+
+ARIELLE is meant for everyone involved in delivering AI-enabled solutions:
+
+- **Engineers and architects** who need stable workflows and quality guarantees.
+- **Product and design** who ensure value, user experience, and responsibility.
+- **Legal and compliance** who assess risk, licensing, and regulatory requirements.
+- **Leadership** who must ensure governance, accountability, and maturity over time.
+
+## How to Use ARIELLE
+
+1. **Start cross‑functionally.** Walk through the ARIELLE domains early in projects.
+2. **Build with the PROSE core.** Use the constraints to structure workflow and documentation.
+3. **Make accountability explicit.** Document decisions, ownership, and validation.
 
 ## What ARIELLE Is Not
 
