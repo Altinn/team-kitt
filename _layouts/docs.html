@@ -343,44 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Initialize collapsible navigation
-  const toggleButtons = document.querySelectorAll('.nav-toggle');
-  
-  toggleButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const targetId = this.getAttribute('data-target');
-      const targetSection = document.getElementById(targetId);
-      const isExpanded = this.getAttribute('aria-expanded') === 'true';
-      
-      // Toggle the current section
-      this.setAttribute('aria-expanded', !isExpanded);
-      this.classList.toggle('expanded');
-      targetSection.classList.toggle('expanded');
-      
-      // Store the state in localStorage
-      const sectionKey = `nav-section-${targetId}`;
-      localStorage.setItem(sectionKey, !isExpanded);
-    });
-  });
-  
-  // Restore expanded state from localStorage on page load
-  toggleButtons.forEach(button => {
-    const targetId = button.getAttribute('data-target');
-    const sectionKey = `nav-section-${targetId}`;
-    const storedState = localStorage.getItem(sectionKey);
-    
-    // Only restore state if it's not the current page section (current page sections should always be expanded)
-    if (storedState !== null && !button.classList.contains('expanded')) {
-      const shouldExpand = storedState === 'true';
-      const targetSection = document.getElementById(targetId);
-      
-      button.setAttribute('aria-expanded', shouldExpand);
-      if (shouldExpand) {
-        button.classList.add('expanded');
-        targetSection.classList.add('expanded');
-      }
-    }
-  });
+  // Keep all navigation sections expanded by default
 
   // Add GitHub-style anchor links to headings - with delay to ensure DOM is ready
   setTimeout(function() {
@@ -442,5 +405,113 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   }, 1000); // Wait 1 second for other scripts to finish
+
+  // Highlight active subsection in the left nav based on scroll position
+  const navSubLinks = Array.from(document.querySelectorAll('.nav-sub-link'));
+  if (navSubLinks.length) {
+    const linksByHash = new Map();
+
+    navSubLinks.forEach(link => {
+      try {
+        const url = new URL(link.href, window.location.origin);
+        if (url.pathname === window.location.pathname && url.hash) {
+          linksByHash.set(url.hash, link);
+        }
+      } catch (error) {
+        console.warn('Invalid nav link URL:', link.href);
+      }
+    });
+
+    const setCurrentSubLink = (hash, options = {}) => {
+      if (!hash || !linksByHash.has(hash)) return;
+      navSubLinks.forEach(item => {
+        item.classList.remove('current');
+        item.removeAttribute('aria-current');
+      });
+      const activeLink = linksByHash.get(hash);
+      activeLink.classList.add('current');
+      activeLink.setAttribute('aria-current', 'location');
+      if (options.scrollIntoView) {
+        activeLink.scrollIntoView({ block: 'center', inline: 'nearest' });
+      }
+    };
+
+    navSubLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const url = new URL(link.href, window.location.origin);
+        if (url.pathname === window.location.pathname && url.hash) {
+          setCurrentSubLink(url.hash, { scrollIntoView: true });
+        }
+      });
+    });
+
+    const sectionHeadings = Array.from(document.querySelectorAll(
+      '.docs-content-inner h1[id], .docs-content-inner h2[id], .docs-content-inner h3[id], .docs-content-inner h4[id], .docs-content-inner h5[id], .docs-content-inner h6[id]'
+    )).filter(heading => linksByHash.has(`#${heading.id}`));
+
+    if (sectionHeadings.length) {
+      let ticking = false;
+      let lastActiveHash = null;
+      const topOffset = 96;
+      const currentSection = document.querySelector('.nav-main-link.current')?.closest('.nav-section');
+      const firstSubLink = currentSection?.querySelector('.nav-subsection .nav-sub-link');
+
+      const updateActiveFromScroll = () => {
+        ticking = false;
+        let activeHeading = null;
+
+        for (const heading of sectionHeadings) {
+          const rect = heading.getBoundingClientRect();
+          if (rect.top - topOffset <= 0) {
+            activeHeading = heading;
+          } else {
+            break;
+          }
+        }
+
+        if (!activeHeading) {
+          activeHeading = sectionHeadings[0];
+        }
+
+        const nextHash = `#${activeHeading.id}`;
+        if (nextHash !== lastActiveHash) {
+          lastActiveHash = nextHash;
+          setCurrentSubLink(nextHash);
+        }
+      };
+
+      const onScroll = () => {
+        if (!ticking) {
+          ticking = true;
+          window.requestAnimationFrame(updateActiveFromScroll);
+        }
+      };
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+
+      if (window.location.hash) {
+        setCurrentSubLink(window.location.hash, { scrollIntoView: true });
+        lastActiveHash = window.location.hash;
+      } else if (firstSubLink) {
+        try {
+          const url = new URL(firstSubLink.href, window.location.origin);
+          if (url.hash) {
+            setCurrentSubLink(url.hash, { scrollIntoView: true });
+            lastActiveHash = url.hash;
+          }
+        } catch (error) {
+          console.warn('Invalid first sublink URL:', firstSubLink.href);
+        }
+      }
+
+      onScroll();
+
+      window.addEventListener('hashchange', () => {
+        setCurrentSubLink(window.location.hash, { scrollIntoView: true });
+        lastActiveHash = window.location.hash;
+      });
+    }
+  }
 });
 </script>

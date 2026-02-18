@@ -1,192 +1,192 @@
 ---
 layout: docs
-title: "Reference"
-display_title: "Reference"
+title: "Referanse"
+display_title: "Referanse"
 permalink: /docs/reference/
 nav_order: 7
 ---
 
-Essential checklists, progression frameworks, and documentation links for ongoing AI Native Development implementation and mastery.
+Essensielle sjekklister, progresjonsrammeverk og dokumentasjonslenker for løpende implementering og mestring av AI Native Development.
 
-## Quick Start Checklist
+## Hurtigstartsjekkliste {#quick-start-checklist}
 
-### Conceptual Foundation
-1. **[ ]** Understand **Markdown Prompt Engineering** principles (semantic structure + precision + tools)
-2. **[ ]** Grasp **Context Engineering** fundamentals (buffer optimization + session strategy)
-3. **[ ]** Learn **Skills as Distribution** (capabilities packaged for auto-discovery)
+### Konseptuelt grunnlag
+1. **[ ]** Forstå prinsippene for **Markdown Prompt Engineering** (semantisk struktur + presisjon + verktøy)
+2. **[ ]** Forstå grunnleggende **Context Engineering** (bufferoptimalisering + øktstrategi)
+3. **[ ]** Lær **Skills som distribusjon** (kapabiliteter pakket for automatisk oppdagelse)
 
-### Implementation Steps
-4. **[ ]** Install useful Skills for your stack: `apm install owner/skill-name` (Skills: instant capabilities)
-5. **[ ]** Create [`.github/copilot-instructions.md`](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilot-instructionsmd-file) with basic project guidelines (Context Engineering: global rules)
-6. **[ ]** Set up domain-specific [`.instructions.md` files](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-instructionsmd-files) with `applyTo` patterns (Context Engineering: selective loading)
-7. **[ ]** Configure [custom agents](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-chat-modes) for your tech stack domains (Context Engineering: domain boundaries)
-8. **[ ]** Create first [`.prompt.md` file](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental) with validation checkpoints (Markdown Prompt Engineering: deterministic templates)
-9. **[ ]** Build your first `.spec.md` template for feature specifications (Agent Primitive: deterministic planning-to-implementation bridge)
-10. **[ ]** Package reusable patterns as a Skill: `apm init skill` (Skills: share knowledge)
-11. **[ ]** Practice spec-first workflow: plan first, implement second (Context Engineering: session splitting)
-12. **[ ]** Test async delegation with [GitHub Coding Agent](https://docs.github.com/en/copilot/about-github-copilot/about-copilot-coding-agent) (Advanced orchestration)
-13. **[ ]** Establish team governance and validation gates (Human-AI collaboration patterns)
+### Implementeringssteg
+4. **[ ]** Installer nyttige Skills for din stack: `apm install owner/skill-name` (Skills: umiddelbare kapabiliteter)
+5. **[ ]** Opprett [`.github/copilot-instructions.md`](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilot-instructionsmd-file) med grunnleggende prosjektretningslinjer (Context Engineering: globale regler)
+6. **[ ]** Sett opp domenespesifikke [`.instructions.md`-filer](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-instructionsmd-files) med `applyTo`-mønstre (Context Engineering: selektiv lasting)
+7. **[ ]** Konfigurer [tilpassede agenter](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-chat-modes) for domenene i teknologistakken (Context Engineering: domenebgrenser)
+8. **[ ]** Lag den første [`.prompt.md`-filen](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental) med valideringssjekkpunkter (Markdown Prompt Engineering: deterministiske maler)
+9. **[ ]** Bygg den første `.spec.md`-malen for funksjonsspesifikasjoner (Agent Primitive: deterministisk bro fra plan til implementering)
+10. **[ ]** Pakk gjenbrukbare mønstre som en Skill: `apm init skill` (Skills: deling av kunnskap)
+11. **[ ]** Praktiser spec-first-arbeidsflyt: planlegg først, implementer deretter (Context Engineering: deling av økter)
+12. **[ ]** Test asynkron delegering med [GitHub Coding Agent](https://docs.github.com/en/copilot/about-github-copilot/about-copilot-coding-agent) (avansert orkestrering)
+13. **[ ]** Etabler teamstyring og valideringsporter (menneske-AI-samarbeidsmønstre)
 
-## Mastery Progression
+## Mestringsprogresjon {#mastery-progression}
 
-### Foundation Level
-**Goal:** Understand core concepts and build first primitives  
-**Time Investment:** 2-3 hours  
-**Key Outcomes:**
-- [ ] Created basic `.instructions.md` files
-- [ ] Configured first chat mode
-- [ ] Built first `.prompt.md` template
-- [ ] Understand theoretical framework
+### Grunnnivå
+**Mål:** Forstå kjernebegreper og bygg de første primitivene  
+**Tidsbruk:** 2-3 timer  
+**Nøkkelutfall:**
+- [ ] Opprettet grunnleggende `.instructions.md`-filer
+- [ ] Konfigurert første chat-modus
+- [ ] Bygd første `.prompt.md`-mal
+- [ ] Forstår det teoretiske rammeverket
 
-**Next Step:** Move to Beginner level with hands-on implementation
+**Neste steg:** Gå til begynnernivå med praktisk implementering
 
-### Beginner Level  
-**Goal:** Basic instructions and prompts working consistently  
-**Time Investment:** 4-6 hours  
-**Key Outcomes:**
-- [ ] Working domain-specific instructions
-- [ ] Multiple chat modes configured
-- [ ] Prompt library with 3-5 templates
-- [ ] Consistent AI interactions in daily work
+### Begynnernivå  
+**Mål:** Grunnleggende instruksjoner og prompts fungerer konsistent  
+**Tidsbruk:** 4-6 timer  
+**Nøkkelutfall:**
+- [ ] Fungerende domenespesifikke instruksjoner
+- [ ] Flere chat-modi konfigurert
+- [ ] Promptbibliotek med 3-5 maler
+- [ ] Konsistente AI-interaksjoner i daglig arbeid
 
-**Next Step:** Advance to Intermediate with workflow patterns
+**Neste steg:** Avanser til mellomnivå med arbeidsflytmønstre
 
-### Intermediate Level
-**Goal:** Spec-driven workflows with context optimization  
-**Time Investment:** 8-12 hours  
-**Key Outcomes:**
-- [ ] Spec-first planning methodology
-- [ ] Context engineering strategies implemented
-- [ ] Session splitting for complex tasks
-- [ ] Memory-driven development patterns
+### Mellomnivå
+**Mål:** Spec-drevne arbeidsflyter med kontekstoptimalisering  
+**Tidsbruk:** 8-12 timer  
+**Nøkkelutfall:**
+- [ ] Spec-first planleggingsmetodikk
+- [ ] Kontekstingeniørstrategier implementert
+- [ ] Deling av økter for komplekse oppgaver
+- [ ] Minnedrevet utviklingsmønstre
 
-**Next Step:** Progress to Advanced with async delegation
+**Neste steg:** Progresjon til avansert nivå med asynkron delegering
 
-### Advanced Level
-**Goal:** Async delegation and multi-agent orchestration  
-**Time Investment:** 15-20 hours  
-**Key Outcomes:**
-- [ ] GitHub Coding Agent delegation working
-- [ ] Parallel multi-agent workflows
-- [ ] Quality gates and validation processes
-- [ ] Hybrid context strategies
+### Avansert nivå
+**Mål:** Asynkron delegering og multiagent-orkestrering  
+**Tidsbruk:** 15-20 timer  
+**Nøkkelutfall:**
+- [ ] GitHub Coding Agent-delegering fungerer
+- [ ] Parallelle multiagent-arbeidsflyter
+- [ ] Kvalitetsporter og valideringsprosesser
+- [ ] Hybride kontekststrategier
 
-**Next Step:** Achieve Expert level with team implementation
+**Neste steg:** Oppnå ekspertnivå med teamimplementering
 
-### Expert Level
-**Goal:** Team-wide governance and frontier pattern innovation  
-**Time Investment:** 25+ hours  
-**Key Outcomes:**
-- [ ] Team-scale coordination frameworks
-- [ ] Knowledge sharing systems
-- [ ] Governance and compliance integration
-- [ ] Innovation in AI Native Development patterns
+### Ekspertnivå
+**Mål:** Teamomfattende styring og innovasjon i frontier-mønstre  
+**Tidsbruk:** 25+ timer  
+**Nøkkelutfall:**
+- [ ] Koordineringsrammeverk i teamskala
+- [ ] Kunnskapsdelingssystemer
+- [ ] Styring og compliance-integrasjon
+- [ ] Innovasjon i AI Native Development-mønstre
 
-**Next Step:** Contribute to community knowledge and frontier research
+**Neste steg:** Bidra til fellesskapskunnskap og frontier-forskning
 
-## The Paradigm Shift
+## Paradigmeskiftet {#the-paradigm-shift}
 
-*Traditional approach: "Tell the AI what to do"*  
-**Agent Mastery approach: "Engineer the context and structure for optimal cognitive performance"**
+*Tradisjonell tilnærming: "Fortell AI hva den skal gjøre"*  
+**Agent Mastery-tilnærming: "Konstruer kontekst og struktur for optimal kognitiv ytelse"**
 
-### Core Principles
-1. **Determinism through Structure:** More predictable outcomes through systematic approaches
-2. **Context as Performance:** Strategic memory management for optimal AI cognitive performance
-3. **Compound Intelligence:** Systems that improve through iteration and learning
-4. **Human-AI Partnership:** Validation gates and collaborative workflows
-5. **Team-Scale Coordination:** Knowledge sharing and organizational transformation
+### Kjerneprinsipper
+1. **Determinisme gjennom struktur:** Mer forutsigbare resultater gjennom systematiske tilnærminger
+2. **Kontekst som ytelse:** Strategisk minnehåndtering for optimal kognitiv ytelse i AI
+3. **Komponert intelligens:** Systemer som forbedres gjennom iterasjon og læring
+4. **Menneske-AI-partnerskap:** Valideringsporter og samarbeidsarbeidsflyter
+5. **Koordinering i teamskala:** Kunnskapsdeling og organisatorisk transformasjon
 
-### Key Insights
-- **The more determinism you need, the more Markdown Prompt Engineering and smaller scope you must use**
-- **The more complex your project, the more Context Engineering becomes critical**
-- **Master both principles and you'll achieve unprecedented consistency and quality in agent-driven development**
+### Nøkkelinnsikter
+- **Jo mer determinisme du trenger, desto mer Markdown Prompt Engineering og mindre omfang må du bruke**
+- **Jo mer komplekst prosjektet ditt er, desto mer kritisk blir Context Engineering**
+- **Mestring av begge prinsippene gir enestående konsistens og kvalitet i agentdrevet utvikling**
 
-**Remember:** Start simple, iterate fast, scale systematically through systematic application of these frontier concepts.
+**Husk:** Start enkelt, iterer raskt, skaler systematisk gjennom systematisk anvendelse av disse frontier-konseptene.
 
-## Documentation References
+## Dokumentasjonsreferanser {#documentation-references}
 
-### Agent Skills & Distribution
-- **[Agent Skills Standard](https://agentskills.io)** - Industry specification for capability packaging and auto-discovery
-- **[APM - Agent Package Manager](https://github.com/microsoft/apm)** - npm for Skills: install, compose, compile
-- **[AGENTS.md Standard](https://agents.md)** - Universal context format adopted by major coding agents
+### Agent Skills og distribusjon
+- **[Agent Skills Standard](https://agentskills.io)** - Bransjestandard for kapabilitetspakking og automatisk oppdagelse
+- **[APM - Agent Package Manager](https://github.com/microsoft/apm)** - npm for Skills: installere, komponere, kompilere
+- **[AGENTS.md Standard](https://agents.md)** - Universelt kontekstformat adoptért av store kodingsagenter
 
-### Community Resources
-- **[Awesome GitHub Copilot](https://github.com/github/awesome-copilot)** - Comprehensive catalog of community-contributed instructions, prompts, and chat modes across all major languages and frameworks
+### Fellesskapsressurser
+- **[Awesome GitHub Copilot](https://github.com/github/awesome-copilot)** - Omfattende katalog over fellesskapsbidragsinstruksjoner, prompts og chat-modi på tvers av språk og rammeverk
 
-### VSCode Copilot Customization
-- **[Main Customization Guide](https://code.visualstudio.com/docs/copilot/copilot-customization)** - Complete overview of VSCode Copilot primitives
-- **[Custom Instructions (.github/copilot-instructions.md)](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilot-instructionsmd-file)** - Global workspace instructions
-- **[Modular Instructions (.instructions.md)](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-instructionsmd-files)** - Domain-specific instructions with applyTo patterns
-- **[Prompt Files (.prompt.md)](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental)** - Reusable task-specific prompts
-- **[Custom Chat Modes](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-chat-modes)** - Configure domain-specific chat behavior
+### VSCode Copilot-tilpasning
+- **[Hovedguide for tilpasning](https://code.visualstudio.com/docs/copilot/copilot-customization)** - Full oversikt over VSCode Copilot-primitiver
+- **[Tilpassede instruksjoner (.github/copilot-instructions.md)](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilot-instructionsmd-file)** - Globale arbeidsområdeinstruksjoner
+- **[Modulære instruksjoner (.instructions.md)](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-instructionsmd-files)** - Domenespesifikke instruksjoner med applyTo-mønstre
+- **[Prompt-filer (.prompt.md)](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental)** - Gjenbrukbare, oppgavespesifikke prompts
+- **[Tilpassede chat-modi](https://code.visualstudio.com/docs/copilot/copilot-customization#_custom-chat-modes)** - Konfigurer domenespesifikk chat-atferd
 
-### GitHub Copilot Documentation
-- **[GitHub Copilot Overview](https://docs.github.com/en/copilot)** - Complete GitHub Copilot documentation
-- **[GitHub Coding Agent](https://docs.github.com/en/copilot/about-github-copilot/about-copilot-coding-agent)** - Async agent for issue assignment and PR creation
-- **[Enabling Coding Agent](https://docs.github.com/en/copilot/how-tos/agents/coding-agent/enabling-copilot-coding-agent)** - Setup and configuration
-- **[MCP Integration](https://docs.github.com/en/copilot/how-tos/agents/coding-agent/extending-copilot-coding-agent-with-the-model-context-protocol-mcp)** - Extend agent capabilities
-- **[Copilot Chat Best Practices](https://docs.github.com/en/copilot/copilot-chat/copilot-chat-cookbook)** - Effective prompting examples
-- **[Responsible Use Guidelines](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-copilot-coding-agent-on-githubcom)** - Best practices for coding agent usage
+### GitHub Copilot-dokumentasjon
+- **[GitHub Copilot Oversikt](https://docs.github.com/en/copilot)** - Full GitHub Copilot-dokumentasjon
+- **[GitHub Coding Agent](https://docs.github.com/en/copilot/about-github-copilot/about-copilot-coding-agent)** - Asynkron agent for issue-tilordning og PR-oppretting
+- **[Aktivering av Coding Agent](https://docs.github.com/en/copilot/how-tos/agents/coding-agent/enabling-copilot-coding-agent)** - Oppsett og konfigurasjon
+- **[MCP-integrasjon](https://docs.github.com/en/copilot/how-tos/agents/coding-agent/extending-copilot-coding-agent-with-the-model-context-protocol-mcp)** - Utvid agentkapabiliteter
+- **[Copilot Chat beste praksis](https://docs.github.com/en/copilot/copilot-chat/copilot-chat-cookbook)** - Effektive prompting-eksempler
+- **[Retningslinjer for ansvarlig bruk](https://docs.github.com/en/copilot/responsible-use-of-github-copilot-features/responsible-use-of-copilot-coding-agent-on-githubcom)** - Beste praksis for bruk av coding agent
 
-## Quick Troubleshooting
+## Hurtig feilsøking {#quick-troubleshooting}
 
-### Common Issues & Solutions
+### Vanlige problemer og løsninger
 
-**Issue:** AI responses are inconsistent  
-**Solution:** Implement more structured Markdown prompts with clear headers and validation gates
+**Problem:** AI-svar er inkonsistente  
+**Løsning:** Implementer mer strukturerte Markdown-prompts med tydelige overskrifter og valideringsporter
 
-**Issue:** Context window limitations  
-**Solution:** Use session splitting and modular instructions with `applyTo` patterns
+**Problem:** Begrensninger i kontekstvinduet  
+**Løsning:** Bruk øktdeling og modulære instruksjoner med `applyTo`-mønstre
 
-**Issue:** Team coordination conflicts  
-**Solution:** Establish shared primitive libraries and repository coordination protocols
+**Problem:** Teamkoordinering gir konflikter  
+**Løsning:** Etabler delte primitivbiblioteker og koordineringsprotokoller for repo
 
-**Issue:** Quality concerns with async agents  
-**Solution:** Implement validation gates and treat agent outputs as high-quality drafts requiring review
+**Problem:** Kvalitetsbekymringer med asynkrone agenter  
+**Løsning:** Implementer valideringsporter og behandle agentutdata som høykvalitetsutkast som må gjennomgås
 
-**Issue:** Compliance and security concerns  
-**Solution:** Use risk-based agent boundaries and embed policy requirements in instructions
+**Problem:** Compliance- og sikkerhetsbekymringer  
+**Løsning:** Bruk risikobaserte agentgrenser og bygg policykrav inn i instruksjoner
 
-## Success Metrics Tracking
+## Sporing av suksessmålinger {#success-metrics-tracking}
 
-### Individual Metrics
-- **Productivity:** Time saved per feature implementation
-- **Quality:** Reduction in bugs and rework cycles
-- **Consistency:** Standardization of AI interaction patterns
-- **Learning:** Speed of new technique adoption
+### Individuelle målinger
+- **Produktivitet:** Tid spart per funksjonsimplementering
+- **Kvalitet:** Reduksjon i feil og omarbeidssykluser
+- **Konsistens:** Standardisering av AI-interaksjonsmønstre
+- **Læring:** Hastighet på innlæring av nye teknikker
 
-### Team Metrics
-- **Coordination:** Reduction in merge conflicts and coordination overhead
-- **Knowledge Sharing:** Primitive reuse rates across team members
-- **Onboarding:** Time to productivity for new team members
-- **Innovation:** Development of new AI Native patterns
+### Teammålinger
+- **Koordinering:** Reduksjon i merge-konflikter og koordineringsoverhead
+- **Kunnskapsdeling:** Gjenbruksrate for primitivbiblioteker
+- **Onboarding:** Tid til produktivitet for nye teammedlemmer
+- **Innovasjon:** Utvikling av nye AI Native-mønstre
 
-### Organizational Metrics
-- **Adoption:** Percentage of teams using AI Native Development
-- **Compliance:** Adherence to governance frameworks
-- **ROI:** Overall productivity and quality improvements
-- **Innovation:** Contribution to frontier AI development practices
+### Organisasjonsmålinger
+- **Adopsjon:** Andel team som bruker AI Native Development
+- **Compliance:** Etterlevelse av styringsrammeverk
+- **ROI:** Samlet produktivitet- og kvalitetsforbedring
+- **Innovasjon:** Bidrag til frontier-praksiser innen AI-utvikling
 
-## Next Steps
+## Neste steg {#next-steps}
 
-### Immediate Actions (This Week)
-1. Complete the [Quick Start Checklist](#-quick-start-checklist)
-2. Choose your learning path from the [main guide](../)
-3. Implement your first Agent Primitive
+### Umiddelbare tiltak (Denne uken)
+1. Fullfør [Hurtigstartsjekklisten](#-hurtigstartsjekkliste)
+2. Velg læringssti fra [hovedguiden](../)
+3. Implementer din første Agent Primitive
 
-### Short Term (This Month)
-1. Build a complete primitive library for your domain
-2. Practice workflow orchestration patterns
-3. Share knowledge with team members
+### Kort sikt (Denne måneden)
+1. Bygg et komplett primitivbibliotek for domenet ditt
+2. Øv på orkestreringsmønstre
+3. Del kunnskap med teammedlemmer
 
-### Medium Term (Next Quarter)
-1. Implement team-scale coordination
-2. Establish governance frameworks
-3. Measure and optimize success metrics
+### Mellomlang sikt (Neste kvartal)
+1. Implementer koordinering i teamskala
+2. Etabler styringsrammeverk
+3. Mål og optimaliser suksessmålinger
 
-### Long Term (This Year)
-1. Achieve expert-level mastery
-2. Contribute to community knowledge
-3. Drive organizational AI Native transformation
+### Lang sikt (Dette året)
+1. Oppnå ekspertmestring
+2. Bidra til fellesskapskunnskap
+3. Driv organisatorisk AI Native-transformasjon
 
-*This reference guide provides the essential resources for your AI Native Development journey. Return here whenever you need quick lookups, progress tracking, or implementation guidance.*
+*Denne referanseguiden gir essensielle ressurser for din AI Native Development-reise. Kom tilbake hit når du trenger raske oppslag, progresjonssporing eller implementeringsveiledning.*

@@ -1,118 +1,118 @@
 ---
 layout: docs
-title: "Tooling"
-display_title: "Tooling: Scaling Agent Primitives"
+title: "Verktøy"
+display_title: "Verktøy: Skalering av agentprimitiver"
 permalink: /docs/tooling/
 nav_order: 4
 ---
 
-> **ARIELLE Focus:** Tooling supports **S**kills distribution and **E**ngineering practices.
+> **ARIELLE-fokus:** Verktøy støtter **S**kills-distribusjon og **E**ngineering-praksis.
 
-You've mastered [The Practice](../concepts/) and understand that your Agent Primitives are **executable software written in natural language**. Now comes the natural next question: how do these markdown files scale beyond your individual development workflow into production-grade infrastructure?
+Du har mestret [Praksisen](../concepts/) og forstår at agentprimitivene dine er **kjørbar programvare skrevet i naturlig språk**. Nå kommer det naturlige neste spørsmålet: Hvordan skalerer disse markdown-filene fra individuell utviklingsflyt til produksjonsklar infrastruktur?
 
-The answer mirrors every programming ecosystem's evolution. Just as JavaScript grew from browser scripts to need Node.js runtimes, package managers, and deployment tooling, your Agent Primitives need similar infrastructure to reach their full potential.
+Svaret speiler utviklingen i alle programmeringsøkosystemer. Akkurat som JavaScript gikk fra nettleserskript til behov for Node.js-kjøretider, pakkebehandlere og deployment-verktøy, trenger agentprimitivene dine tilsvarende infrastruktur for å nå sitt fulle potensial.
 
-## Natural Language as Code
+## Naturlig språk som kode
 
-Your Agent Primitives exhibit all the characteristics of professional software: modularity, reusability, dependencies, versioning, and continuous evolution. This isn't just a metaphor - these `.prompt.md` and `.instructions.md` files represent a genuine new form of software development that deserves proper tooling infrastructure.
+Agentprimitivene dine har alle kjennetegnene på profesjonell programvare: modularitet, gjenbruk, avhengigheter, versjonering og kontinuerlig utvikling. Dette er ikke bare en metafor - disse `.prompt.md`- og `.instructions.md`-filene representerer en reell ny form for programvareutvikling som fortjener ordentlig verktøystøtte.
 
-Consider what happens as your Agent Primitives mature:
+Se hva som skjer når agentprimitivene dine modnes:
 
-- **Modularity**: Separate concerns across different primitive files that work together
-- **Reusability**: Same primitives work reliably across projects and contexts  
-- **Dependencies**: MCP servers, external tools, and context requirements that must be managed
-- **Evolution**: Continuous refinement and versioning as your workflows improve
-- **Distribution**: Teams want to share proven primitives like they share code libraries
+- **Modularitet**: Skille ansvar på tvers av ulike primitive filer som fungerer sammen
+- **Gjenbruk**: De samme primitivene fungerer pålitelig på tvers av prosjekter og kontekster
+- **Avhengigheter**: MCP-servere, eksterne verktøy og kontekstkrav som må håndteres
+- **Utvikling**: Kontinuerlig raffinering og versjonering etter hvert som arbeidsflytene forbedres
+- **Distribusjon**: Team vil dele velprøvde primitiver slik de deler kodebiblioteker
 
-This recognition transforms how we think about AI development tooling. Your natural language programs need the same infrastructure support as any other software.
+Denne erkjennelsen endrer hvordan vi tenker om verktøy for AI-utvikling. Programmer i naturlig språk trenger den samme infrastrukturen som annen programvare.
 
-## Agent CLI Runtimes
+## Agent-CLI-kjøretider
 
-Most developers create and run Agent Primitives directly in VS Code with GitHub Copilot - and that's perfect for interactive development, debugging, and daily workflow refinement. But just as JavaScript eventually needed Node.js to break free from browser constraints, your natural language programs need **Agent CLI Runtimes** for automated and production scenarios.
+De fleste utviklere lager og kjører agentprimitiver direkte i VS Code med GitHub Copilot - og det er perfekt for interaktiv utvikling, feilsøking og daglig forbedring av arbeidsflyter. Men akkurat som JavaScript til slutt trengte Node.js for å bryte fri fra nettleserbegrensninger, trenger programmer i naturlig språk **Agent CLI-kjøretider** for automatiserte og produksjonsscenarier.
 
-The emerging ecosystem includes different vendor implementations of the same core functionality: **OpenAI Codex CLI**, **Anthropic Claude Code**, **GitHub Copilot CLI**, and future vendor runtimes as the ecosystem matures. Each provides command-line execution of your Agent Primitives with access to their respective model capabilities.
+Det fremvoksende økosystemet inkluderer ulike leverandørimplementasjoner av den samme kjernefunksjonaliteten: **OpenAI Codex CLI**, **Anthropic Claude Code**, **GitHub Copilot CLI** og fremtidige leverandørkjøretider etter hvert som økosystemet modnes. Hver gir kommandolinjekjøring av agentprimitivene dine med tilgang til sine respektive modellkapabiliteter.
 
-### Inner Loop vs Outer Loop
+### Indre løkke vs ytre løkke
 
-The key insight is understanding when each environment serves you best:
+Nøkkelinnsikten er å forstå når hvert miljø tjener deg best:
 
-- **Inner Loop (VS Code + GitHub Copilot)**: Interactive development, testing, and workflow refinement
-- **Outer Loop (Agent CLI Runtimes)**: Reproducible execution, CI/CD integration, and production deployment
+- **Indre løkke (VS Code + GitHub Copilot)**: Interaktiv utvikling, testing og forbedring av arbeidsflyter
+- **Ytre løkke (Agent CLI-kjøretider)**: Reproduserbar kjøring, CI/CD-integrasjon og produksjonsutrulling
 
-Agent CLI Runtimes transform your Agent Primitives from IDE-bound files into **autonomously executable workflows** that run consistently across any environment. They provide command-line execution, CI/CD integration, environment consistency, and native support for MCP servers - bridging your development work to production reality.
+Agent-CLI-kjøretider transformerer agentprimitivene dine fra IDE-bundne filer til **autonomt kjørbare arbeidsflyter** som kjører konsistent i alle miljøer. De gir kommandolinjekjøring, CI/CD-integrasjon, miljøkonsistens og innebygd støtte for MCP-servere - og binder utviklingsarbeid til produksjonsvirkelighet.
 
-## Runtime Management
+## Kjøretidsadministrasjon
 
-While VS Code + GitHub Copilot handles individual development perfectly, teams need additional infrastructure for **sharing, versioning, and productizing** their Agent Primitives. Managing multiple CLI environments becomes complex quickly - different installation procedures, configuration requirements, and compatibility matrices.
+Selv om VS Code + GitHub Copilot håndterer individuell utvikling perfekt, trenger team ekstra infrastruktur for å **dele, versjonere og produktifisere** agentprimitiver. Å administrere flere CLI-miljøer blir raskt komplekst - ulike installasjonsprosedyrer, konfigurasjonskrav og kompatibilitetsmatriser.
 
-[Agent Package Manager](https://github.com/microsoft/apm) solves this by providing unified runtime management and agent package distribution. Instead of manually installing and configuring each vendor CLI, APM handles the complexity while preserving your existing VS Code workflow.
+[Agent Package Manager](https://github.com/microsoft/apm) løser dette ved å tilby enhetlig kjøretidsadministrasjon og distribusjon av agentpakker. I stedet for å installere og konfigurere hver leverandør-CLI manuelt, håndterer APM kompleksiteten og bevarer VS Code-arbeidsflyten.
 
-Here's how runtime management works in practice:
+Slik fungerer kjøretidsadministrasjon i praksis:
 
 ```bash
-# Install APM once
+# Installer APM én gang
 curl -sSL https://raw.githubusercontent.com/microsoft/apm/main/install.sh | sh
 
-# Optional: setup your GitHub PAT to use GitHub Copilot CLI
+# Valgfritt: sett opp GitHub PAT for å bruke GitHub Copilot CLI
 export GITHUB_COPILOT_PAT=your_token_here
 
-# APM manages runtime installation for you
-apm runtime setup copilot        # Installs GitHub Copilot CLI (Recommended)
-apm runtime setup codex          # Installs OpenAI Codex CLIs
+# APM håndterer kjøretidsinstallasjon for deg
+apm runtime setup copilot        # Installerer GitHub Copilot CLI (Anbefalt)
+apm runtime setup codex          # Installerer OpenAI Codex CLI-er
 
-# Check what's available
-apm runtime list                 # Shows installed runtimes
-apm runtime status               # Shows which runtime will be used
+# Sjekk hva som er tilgjengelig
+apm runtime list                 # Viser installerte kjøretider
+apm runtime status               # Viser hvilken kjøretid som vil brukes
 
-# Install MCP dependencies (like npm install)
-# Note: this feature is under development
+# Installer MCP-avhengigheter (som npm install)
+# Merk: denne funksjonen er under utvikling
 apm install
 
-# Compile Instructions files to Agents.md files
+# Kompiler Instructions-filer til AGENTS.md-filer
 apm compile
 
-# Run workflows against your chosen runtime
-# This will trigger 'copilot --log-level all --log-dir copilot-logs --allow-all-tools -p  security-review.prompt.md' command 
-# Check the example apm.yml file a bit below in this guide
+# Kjør arbeidsflyter mot valgt kjøretid
+# Dette vil trigge kommandoen 'copilot --log-level all --log-dir copilot-logs --allow-all-tools -p  security-review.prompt.md'
+# Se eksempel på apm.yml litt lenger ned i denne guiden
 apm run copilot-sec-review --param pr_id=123 
 ```
 
-The key benefits become immediately apparent: your daily development stays exactly the same in VS Code, APM installs and configures runtimes automatically, your workflows run regardless of which runtime is installed, and the same `apm run` command works consistently across all runtimes.
+De viktigste fordelene blir umiddelbart tydelige: den daglige utviklingen i VS Code er uendret, APM installerer og konfigurerer kjøretider automatisk, arbeidsflytene kjører uavhengig av hvilken kjøretid som er installert, og den samme `apm run`-kommandoen fungerer konsistent på tvers av alle kjøretider.
 
-**✅ Checkpoint:** Runtime complexity is abstracted away while preserving development workflow flexibility
+**✅ Sjekkpunkt:** Kjøretidskompleksitet abstraheres bort samtidig som fleksibilitet i utviklingsflyten bevares
 
-## Context Compilation & Optimization
+## Kontekstkompilering og optimalisering
 
-Your modular `.instructions.md` files work great in VSCode, but they're locked to that one environment. To work across all coding agents (Cursor, Claude Desktop, etc.), you need the universal `AGENTS.md` standard. And when pulling in primitives from multiple packages, they need to merge intelligently without context pollution.
+De modulære `.instructions.md`-filene fungerer godt i VS Code, men de er låst til det ene miljøet. For å fungere på tvers av alle kodingsagenter (Cursor, Claude Desktop, osv.) trenger du den universelle `AGENTS.md`-standarden. Og når primitivene kommer fra flere pakker, må de flettes smart uten kontekforurensing.
 
-**Compilation solves both:** transforms VSCode-native instructions into portable `AGENTS.md` files while optimizing how contexts from dependencies and local primitives combine. This is what enables **spec-driven team coordination** from [Team & Enterprise Scale](../team-adoption/).
+**Kompilering løser begge deler:** Den transformerer VS Code-native instrukser til portable `AGENTS.md`-filer samtidig som den optimaliserer hvordan kontekst fra avhengigheter og lokale primitiver kombineres. Dette muliggjør **spec-drevet teamkoordinering** fra [Team & Enterprise Scale](../team-adoption/).
 
-[APM's compiler](https://github.com/microsoft/apm) analyzes your `applyTo` patterns, maps your directory structure, and generates the optimal `AGENTS.md` hierarchy that guarantees complete coverage with minimal redundancy:
+[APM-kompilatoren](https://github.com/microsoft/apm) analyserer `applyTo`-mønstrene dine, kartlegger katalogstrukturen, og genererer optimal `AGENTS.md`-hierarki som garanterer full dekning med minimal redundans:
 
 ```bash
-# 1. Author modular primitives as usual
+# 1. Skriv modulære primitiver som vanlig
 .apm/instructions/
 ├── security.instructions.md      # applyTo: "**/auth/**"
 ├── react.instructions.md         # applyTo: "**/*.{tsx,jsx}"
 └── api-design.instructions.md    # applyTo: "backend/api/**"
 
-# 2. Run compilation
+# 2. Kjør kompilering
 apm compile
 
-# 3. Optimal AGENTS.md hierarchy generated automatically
-├── AGENTS.md                     # Global context (minimal)
-├── frontend/AGENTS.md           # React patterns
+# 3. Optimalt AGENTS.md-hierarki genereres automatisk
+├── AGENTS.md                     # Global kontekst (minimal)
+├── frontend/AGENTS.md           # React-mønstre
 └── backend/
-    ├── AGENTS.md                # Backend patterns
-    └── auth/AGENTS.md           # Security + backend
+    ├── AGENTS.md                # Backend-mønstre
+    └── auth/AGENTS.md           # Sikkerhet + backend
 ```
 
-**Key benefits:**
-- **Portability**: Works across all coding agents supporting AGENTS.md standard
-- **Efficiency**: Reduction in context per file vs manual approaches
-- **Coverage**: Mathematical guarantee every file gets needed instructions
-- **Maintenance**: Modify primitives, recompile — `AGENTS.md` updates automatically
-- **Team Coordination**: Changes to team standards instantly propagate through compilation
+**Nøkkelfordeler:**
+- **Portabilitet**: Fungerer på tvers av alle kodingsagenter som støtter AGENTS.md-standarden
+- **Effektivitet**: Reduksjon i kontekst per fil sammenlignet med manuelle tilnærminger
+- **Dekning**: Matematisk garanti for at hver fil får nødvendige instrukser
+- **Vedlikehold**: Endre primitiver, rekkompiler - `AGENTS.md` oppdateres automatisk
+- **Teamkoordinering**: Endringer i teamstandarder sprer seg umiddelbart gjennom kompilering
 
 ```bash
 $ apm compile --verbose
@@ -127,40 +127,40 @@ Placement Distribution
 └─ scripts/deployment     1 instructions from 1 source
 ```
 
-For small projects (5-10 instruction files), manual `AGENTS.md` organization works fine—see [Getting Started](../getting-started/). As you scale beyond that or start using dependencies, compilation becomes essential. See [APM's compilation docs](https://github.com/microsoft/apm/blob/main/docs/compilation.md) for technical details.
+For små prosjekter (5-10 instruksjonsfiler) fungerer manuell `AGENTS.md`-organisering fint — se [Kom i gang](../getting-started/). Når du skalerer utover det eller begynner å bruke avhengigheter, blir kompilering essensielt. Se [APM sine kompileringdocs](https://github.com/microsoft/apm/blob/main/docs/compilation.md) for tekniske detaljer.
 
-**✅ Checkpoint:** Compilation creates portable, optimized context that scales across agents and projects
+**✅ Sjekkpunkt:** Kompilering skaper portabel, optimalisert kontekst som skalerer på tvers av agenter og prosjekter
 
-## Distribution and Packaging
+## Distribusjon og pakking
 
-Once your Agent Primitives prove valuable, you'll naturally want to **share them with your team** and eventually **deploy them in production**. This is where the parallels to traditional software development become most apparent - you need package management, dependency resolution, version control, and distribution mechanisms.
+Når agentprimitivene dine viser seg å være verdifulle, vil du naturlig nok **dele dem med teamet** og etter hvert **ta dem i produksjon**. Det er her parallellene til tradisjonell programvareutvikling blir tydelige - du trenger pakkestyring, avhengighetsløsning, versjonskontroll og distribusjonsmekanismer.
 
-The challenge emerges quickly: you've built powerful Agent Primitives, your team wants to use them, but distributing markdown files and ensuring consistent MCP dependencies across different environments becomes unwieldy. You need the equivalent of npm for natural language programs.
+Utfordringen kommer raskt: Du har bygget kraftige agentprimitiver, teamet vil bruke dem, men distribusjon av markdown-filer og konsistente MCP-avhengigheter på tvers av miljøer blir uhåndterlig. Du trenger ekvivalenten til npm for programmer i naturlig språk.
 
-[APM](https://github.com/microsoft/apm) provides npm-style package management for natural language programs—create distributable packages with dependencies, versioning, and composition. This is the foundation for **agent onboarding** and **enterprise governance** from [Team & Enterprise Scale](../team-adoption/).
+[APM](https://github.com/microsoft/apm) gir npm-stil pakkestyring for programmer i naturlig språk - bygg distribuerbare pakker med avhengigheter, versjonering og komposisjon. Dette er grunnlaget for **agent-onboarding** og **enterprise governance** fra [Team & Enterprise Scale](../team-adoption/).
 
-### Package Management in Practice
+### Pakkestyring i praksis
 
 ```bash
-# Create an APM package
+# Opprett en APM-pakke
 apm init security-review-workflow
 
-# Write .apm/instructions/*.instructions.md files
+# Skriv .apm/instructions/*.instructions.md-filer
 
-# Develop and test your agentic workflow locally
+# Utvikle og test den agentiske arbeidsflyten lokalt
 cd security-review-workflow 
 apm compile && apm install
 apm run copilot-sec-review --param pr_id=123
 
-# Publish the APM package to GitHub: 
+# Publiser APM-pakken til GitHub: 
 git tag v1.0.0 && git push --tags
 ```
 
-APM projects have an `apm.yml` configuration file that serves as the `package.json` equivalent for Agent Primitives, defining scripts, dependencies, and input parameters:
+APM-prosjekter har en `apm.yml`-konfigurasjonsfil som fungerer som `package.json`-ekvivalenten for agentprimitiver, og definerer skript, avhengigheter og inputparametere:
 
 ```yaml
-# Team members can install and use your primitives
-# apm.yml in your project root (like package.json)
+# Teammedlemmer kan installere og bruke primitivene dine
+# apm.yml i prosjektroten (som package.json)
 name: security-review-workflow
 version: 1.2.0
 description: Comprehensive security review process with GitHub integration
@@ -177,21 +177,21 @@ dependencies:
     - github/github-mcp-server
 ```
 
-Upon context compilation, multiple APM packages can contribute to the same `applyTo` patterns without conflicts. When `company/compliance-rules`, `company/design-guidelines`, and your local project all target `**/auth/**`, compilation merges all three contexts with source attribution—layered, composable context building on shared foundations.
+Ved kontekstkompilering kan flere APM-pakker bidra til de samme `applyTo`-mønstrene uten konflikter. Når `company/compliance-rules`, `company/design-guidelines` og ditt lokale prosjekt alle målretter `**/auth/**`, flettes alle tre kontekstene med kildeattribusjon - lagdelt, komponerbar kontekst bygges på felles fundament.
 
-**Real example:** [corporate-website](https://github.com/danielmeppiel/corporate-website) uses `compliance-rules` + `design-guidelines` as dependencies. After `apm install && apm compile`, compliance patterns automatically apply to data handling code, design standards to frontend components, both compose with local context—zero conflicts, complete coverage.
+**Reelt eksempel:** [corporate-website](https://github.com/danielmeppiel/corporate-website) bruker `compliance-rules` + `design-guidelines` som avhengigheter. Etter `apm install && apm compile` gjelder compliance-mønstre automatisk for datahåndteringskode, designstandarder for frontend-komponenter, begge komponerer med lokal kontekst - null konflikter, full dekning.
 
-**Enterprise governance pattern:** When your compliance team updates `company/compliance-rules` with new data retention policies, every team across the organization runs `apm install && apm compile`. Every agent, every project, instantly compliant. This is **deterministic agent onboarding at scale**—policies become enforceable primitives, not training materials.
+**Enterprise governance-mønster:** Når compliance-teamet oppdaterer `company/compliance-rules` med nye retningslinjer for datalagring, kjører alle team i organisasjonen `apm install && apm compile`. Hver agent, hvert prosjekt, blir umiddelbart compliant. Dette er **deterministisk agent-onboarding i skala** - policyer blir håndhevbare primitiver, ikke opplæringsmateriell.
 
-The benefits compound quickly: distribute tested workflows and instructions as versioned packages with dependencies, automatically resolve and install required MCP servers, track workflow evolution and maintain compatibility across updates, build on shared primitive libraries from the community, ensure consistent execution across different team members' setups, and enable instant enterprise-wide policy updates for governance.
+Fordelene akkumuleres raskt: distribuer testede arbeidsflyter og instruksjoner som versjonerte pakker med avhengigheter, installer og løs opp nødvendig MCP-avhengigheter automatisk, spor utviklingen av arbeidsflyter og oppretthold kompatibilitet på tvers av oppdateringer, bygg videre på delte primitivbiblioteker fra fellesskapet, sikre konsistent kjøring på tvers av teammedlemmers oppsett, og muliggjør umiddelbare policy-oppdateringer på tvers av hele virksomheten.
 
-**✅ Checkpoint:** Your Agent Primitives are now packaged as distributable software with managed dependencies
+**✅ Sjekkpunkt:** Agentprimitivene dine er nå pakket som distribuerbar programvare med håndterte avhengigheter
 
-## Production Deployment
+## Produksjonsutrulling
 
-The final piece of the tooling ecosystem enables **Continuous AI** - automated execution of packaged Agent Primitives in production environments. Your carefully developed workflows can now run automatically in CI/CD pipelines with the same reliability as traditional software deployments.
+Den siste delen av verktøyøkosystemet muliggjør **Continuous AI** - automatisert kjøring av pakkede agentprimitiver i produksjonsmiljøer. De nøye utviklede arbeidsflytene kan nå kjøre automatisk i CI/CD-pipelines med samme pålitelighet som tradisjonell programvareutrulling.
 
-Building on the `security-review-workflow` package example above, here's how the same APM project deploys to production with multi-runtime flexibility.
+Med utgangspunkt i `security-review-workflow`-eksemplet over, ser du her hvordan det samme APM-prosjektet deployes til produksjon med fleksibilitet på tvers av kjøretider.
 
 ```yaml
 # .github/workflows/security-review.yml
@@ -227,34 +227,34 @@ jobs:
       
 ```
 
-**Key Connection**: The `matrix.script` values (`codex-sec-review`, `copilot-sec-review`, `codex-debug`) correspond exactly to the scripts defined in the `apm.yml` configuration above. [APM](https://github.com/microsoft/apm) automatically installs the MCP dependencies (`ghcr.io/github/github-mcp-server`, `security-scanner-mcp`) and passes the input parameters (`pr_id`) to your security-review.prompt.md workflow.
+**Nøkkelforbindelse**: `matrix.script`-verdiene (`codex-sec-review`, `copilot-sec-review`, `codex-debug`) tilsvarer nøyaktig skriptene som er definert i `apm.yml`-konfigurasjonen over. [APM](https://github.com/microsoft/apm) installerer MCP-avhengigheter automatisk (`ghcr.io/github/github-mcp-server`, `security-scanner-mcp`) og sender inputparametere (`pr_id`) til `security-review.prompt.md`-arbeidsflyten.
 
-This creates production-ready AI workflows with runtime flexibility, parallel execution capabilities, consistent deployment across environments, and automated quality processes integrated into standard CI/CD pipelines.
+Dette skaper produksjonsklare AI-arbeidsflyter med fleksibilitet i kjøretider, parallell kjøring, konsistent utrulling på tvers av miljøer, og automatiserte kvalitetsprosesser integrert i standard CI/CD-pipelines.
 
-**✅ Checkpoint:** Your Agent Primitives now run automatically in production with the same reliability as traditional software
+**✅ Sjekkpunkt:** Agentprimitivene dine kjører nå automatisk i produksjon med samme pålitelighet som tradisjonell programvare
 
-## Ecosystem Evolution
+## Økosystemutvikling
 
-This tooling progression follows the same predictable pattern as every successful programming ecosystem. Understanding this pattern helps you see where AI Native Development is heading and how to position your work strategically.
+Denne verktøyprogresjonen følger samme forutsigbare mønster som alle vellykkede programmeringsøkosystemer. Å forstå dette mønsteret hjelper deg å se hvor AI Native Development er på vei og hvordan du kan posisjonere arbeidet ditt strategisk.
 
-The evolution happens in four stages:
+Utviklingen skjer i fire steg:
 
-1. **Raw Code** → Agent Primitives (.prompt.md, .instructions.md files)
-2. **Runtime Environments** → Agent CLI Runtimes (Codex CLI, Claude Code, etc.)
-3. **Package Management** → [APM](https://github.com/microsoft/apm) (distribution and orchestration layer)
-4. **Thriving Ecosystem** → Shared libraries, tools, and community packages
+1. **Råkode** → Agentprimitiver (.prompt.md, .instructions.md-filer)
+2. **Kjøretidsmiljøer** → Agent-CLI-kjøretider (Codex CLI, Claude Code, osv.)
+3. **Pakkestyring** → [APM](https://github.com/microsoft/apm) (distribusjons- og orkestreringslag)
+4. **Levende økosystem** → Delte bibliotek, verktøy og fellesskapspakker
 
-Just as npm enabled JavaScript's explosive growth by solving the package distribution problem, [APM](https://github.com/microsoft/apm) enables the Agent Primitive ecosystem to flourish by providing the missing infrastructure layer that makes sharing and scaling natural language programs practical.
+Akkurat som npm muliggjorde JavaScripts eksplosive vekst ved å løse pakkedistribusjonsproblemet, muliggjør [APM](https://github.com/microsoft/apm) at agentprimitiv-økosystemet blomstrer ved å tilby den manglende infrastrukturlaget som gjør deling og skalering av programmer i naturlig språk praktisk.
 
-## Key Takeaways
+## Nøkkelpunkter
 
-1. **Natural Language as Code** - Your Agent Primitives are genuine software that deserves proper tooling infrastructure
-2. **Agent CLI Runtimes** enable execution beyond VS Code, particularly for CI/CD and production scenarios  
-3. **Runtime Management** through APM simplifies portability in multi-vendor Agentic Coding environments while preserving VS Code workflow
-4. **Context Compilation** transforms modular `.instructions.md` into portable, optimized `AGENTS.md` hierarchies
-5. **Package Management** enables npm-style distribution with dependencies, versioning, and composition
-6. **Production Deployment** makes Agent Primitives first-class citizens in modern software delivery
+1. **Naturlig språk som kode** - Agentprimitivene dine er reell programvare som fortjener ordentlig verktøystøtte
+2. **Agent-CLI-kjøretider** muliggjør kjøring utenfor VS Code, spesielt for CI/CD og produksjon
+3. **Kjøretidsadministrasjon** via APM forenkler portabilitet i flerleverandør agentiske kodingsmiljøer, samtidig som VS Code-arbeidsflyten bevares
+4. **Kontekstkompilering** transformerer modulære `.instructions.md` til portable, optimaliserte `AGENTS.md`-hierarkier
+5. **Pakkestyring** muliggjør npm-stil distribusjon med avhengigheter, versjonering og komposisjon
+6. **Produksjonsutrulling** gjør agentprimitiver til førsteklasses borgere i moderne programvareleveranse
 
-**Ready to execute workflows?** With production-grade infrastructure in place, continue to [Agent Delegation](../agent-delegation/) to master execution strategies—from local IDE control to sophisticated async orchestration that leverages everything you just learned.
+**Klar til å kjøre arbeidsflyter?** Med produksjonsklar infrastruktur på plass kan du fortsette til [Agentdelegasjon](../agent-delegation/) for å mestre utførelsesstrategier - fra lokal IDE-kontroll til sofistikert asynkron orkestrering som utnytter alt du nettopp lærte.
 
-**Want to see advanced execution patterns?** Jump to [Agent Delegation](../agent-delegation/) for comprehensive orchestration strategies that leverage this tooling foundation for both local and async agent coordination.
+**Vil du se avanserte utførelsesmønstre?** Gå til [Agentdelegasjon](../agent-delegation/) for omfattende orkestreringsstrategier som bygger på denne verktøybasen for både lokal og asynkron agentkoordinering.

@@ -1,63 +1,63 @@
 ---
 layout: docs
-title: "Getting Started"
-display_title: "Getting Started"
+title: "Kom i gang"
+display_title: "Kom i gang"
 permalink: /docs/getting-started/
 nav_order: 3
 ---
 
-> **ARIELLE Focus:** This section is hands-on **P**rompts and **S**kills—building your first primitives.
+> **ARIELLE-fokus:** Denne delen er hands-on **P**rompts og **S**kills — bygg dine første primitiver.
 
-Now that you understand the [ARIELLE Specification](../arielle/), it's time to build your AI Native Development environment. This hands-on implementation will give you immediate productivity improvements while establishing the foundation for more advanced workflows.
+Nå som du forstår [ARIELLE-spesifikasjonen](../arielle/), er det tid for å bygge ditt AI Native Development-miljø. Denne praktiske implementeringen gir deg umiddelbare produktivitetsforbedringer og etablerer fundamentet for mer avanserte arbeidsflyter.
 
-The setup follows a logical progression: start by installing Skills that provide instant capabilities, then add local instructions for project-specific guidance, configure custom agents for safe boundaries, build reusable prompts for common tasks, and create specification templates that bridge planning to implementation.
+Oppsettet følger en logisk progresjon: start med å installere Skills som gir umiddelbare kapabiliteter, legg deretter til lokale instrukser for prosjektspecifikke føringer, konfigurer tilpassede agenter for trygge grenser, bygg gjenbrukbare prompts for vanlige oppgaver, og lag spesifikasjonsmaler som bygger bro mellom planlegging og implementering.
 
-## Start with Skills
+## Start med Skills
 
-Before creating custom primitives, leverage the **[Agent Skills](https://agentskills.io)** ecosystem. Skills are pre-packaged capabilities that agents auto-discover and summon based on task relevance—giving you instant productivity without configuration.
+Før du lager egne primitiver, utnytt **[Agent Skills](https://agentskills.io)**-økosystemet. Skills er ferdigpakkede kapabiliteter som agenter auto-oppdager og henter inn basert på oppgaverelevans — det gir umiddelbar produktivitet uten konfigurasjon.
 
-**✅ Quick Actions:**
-- Install [APM (Agent Package Manager)](https://github.com/microsoft/apm) if you haven't already. Read more at [Tooling](../tooling/).
-- Browse [community Skills](https://github.com/github/awesome-copilot/tree/main/skills) for your tech stack
-- Install relevant Skills: `apm install awesome-copilot/skill/<skill-name>`
+**✅ Hurtighandlinger:**
+- Installer [APM (Agent Package Manager)](https://github.com/microsoft/apm) hvis du ikke har gjort det. Les mer under [Verktøy](../tooling/).
+- Bla i [community Skills](https://github.com/github/awesome-copilot/tree/main/skills) for din teknologistakk
+- Installer relevante Skills: `apm install awesome-copilot/skill/<skill-name>`
 
-> 💡 **Progressive Context Disclosure**: Once installed, you don't need to explicitly invoke Skills. Agents automatically scan available Skills and load only what's relevant to your current task—reducing context pollution and improving response quality.
+> 💡 **Progressiv kontekst-distribusjon**: Når de er installert, trenger du ikke å kalle på Skills eksplisitt. Agenter skanner tilgjengelige Skills automatisk og laster bare det som er relevant for oppgaven — mindre kontekstforurensing og høyere svarkvalitet.
 
-**⚠️ Checkpoint:** Skills installed and compiled—agents now have access to packaged capabilities
+**⚠️ Sjekkpunkt:** Skills installert og kompilert — agenter har nå tilgang til pakkede kapabiliteter
 
 ---
 
-With Skills providing your baseline capabilities, you'll want to add project-specific guidance that doesn't belong in a distributed Skill. This is where local primitives come in.
+Med Skills som baseline vil du legge til prosjektspecifikke føringer som ikke hører hjemme i en distribuert Skill. Her kommer lokale primitiver inn.
 
-## Instructions Architecture {#a-instructions-architecture}
+## Instruksjonsarkitektur {#a-instructions-architecture}
 
-Instructions form the bedrock of reliable AI behavior: they're the persistent rules that guide the Agent without cluttering your immediate context. Rather than repeating the same guidance in every conversation, instructions embed your team's knowledge directly into the AI's reasoning process.
+Instrukser er grunnfjellet for pålitelig AI-atferd: de er de vedvarende reglene som styrer agenten uten å tette den umiddelbare konteksten. I stedet for å gjenta samme veiledning i hver samtale, bygger instrukser teamets kunnskap direkte inn i AI-ens resonnering.
 
-The key insight is modularity: instead of one massive instruction file that applies everywhere, you create targeted files that activate only when working with specific technologies or file types. This context engineering approach keeps your AI focused and your guidance relevant.
+Nøkkelinnsikten er modularitet: i stedet for én massiv instruksjonsfil som gjelder overalt, lager du målrettede filer som aktiveres bare når du jobber med bestemte teknologier eller filtyper. Denne kontekstingeniør-tilnærmingen holder AI-en fokusert og veiledningen relevant.
 
-**✅ Quick Actions:**
-- Create the general [`copilot-instructions.md`](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilot-instructionsmd-file) file in the `.github` folder for the repository with common rules
-- Create modular [`.instructions.md` files](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-instructionsmd-files) in the `.github/instructions/` folder by domain (frontend, backend, testing, docs, specs...)
-- Use [`applyTo: "**/*.{js,ts...}"`](https://code.visualstudio.com/docs/copilot/copilot-customization#_instructions-file-structure) patterns for selective application
-- Compile to [AGENTS.md standard](https://agents.md) so your context works across all coding agents. See [Tooling](../tooling/) to learn about **context compilation**
+**✅ Hurtighandlinger:**
+- Opprett den generelle [`copilot-instructions.md`](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilot-instructionsmd-file)-filen i `.github`-mappen med felles regler
+- Opprett modulære [`.instructions.md`-filer](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-instructionsmd-files) i `.github/instructions/`-mappen etter domene (frontend, backend, testing, docs, specs...)
+- Bruk [`applyTo: "**/*.{js,ts...}"`](https://code.visualstudio.com/docs/copilot/copilot-customization#_instructions-file-structure)-mønstre for selektiv bruk
+- Kompiler til [AGENTS.md-standarden](https://agents.md) så konteksten fungerer på tvers av alle kodingsagenter. Se [Verktøy](../tooling/) for **kontekstkompilering**
 
-> 💡 **Context Engineering in Action**: Modular instructions preserve context space by loading only relevant guidelines when working on specific file types, leaving maximum buffer for code understanding.
+> 💡 **Kontekstengineering i praksis**: Modulære instrukser bevarer kontekstrom ved å laste bare relevante retningslinjer når du jobber med bestemte filtyper, og etterlater maksimal buffer for kodeforståelse.
 
-### 🔧 Tools & Files:
+### 🔧 Verktøy og filer:
 ```
 .github/
-├── copilot-instructions.md          # Global repository rules
+├── copilot-instructions.md          # Globale repo-regler
 └── instructions/
     ├── frontend.instructions.md     # applyTo: "**/*.{jsx,tsx,css}"
     ├── backend.instructions.md      # applyTo: "**/*.{py,go,java}"
     └── testing.instructions.md      # applyTo: "**/test/**"
 
-# After context compilation:
-# Nested AGENTS.md files auto-generated in optimal locations
+# Etter kontekstkompilering:
+# Nestede AGENTS.md-filer autogenereres på optimale lokasjoner
 ```
 
-### Example: Markdown Prompt Engineering in Instructions
-Create your `.github/instructions/frontend.instructions.md` file:
+### Eksempel: Markdown Prompt Engineering i instrukser
+Lag `.github/instructions/frontend.instructions.md`-filen:
 
 ```markdown
 ---
@@ -82,32 +82,32 @@ Generate code with:
 - [ ] Type exports in appropriate index files
 ```
 
-**⚠️ Checkpoint:** Instructions are modular, targeted, and ready to compile
+**⚠️ Sjekkpunkt:** Instrukser er modulære, målrettede og klare til kompilering
 
-## Custom Agents Configuration {#b-chat-modes-configuration}
+## Konfigurasjon av tilpassede agenter {#b-chat-modes-configuration}
 
-With your instruction architecture in place, you need a way to enforce domain boundaries and prevent AI agents from overstepping their expertise. Custom Agents solve this by creating professional boundaries similar to real-world licensing—architects plan but don't build, engineers execute but don't set strategy.
+Med instruksjonsarkitekturen på plass trenger du en måte å håndheve domenebgrenser og forhindre at AI-agenter trår utenfor sin ekspertise. Tilpassede agenter løser dette ved å etablere profesjonelle grenser, slik vi kjenner fra virkelige lisenser — arkitekter planlegger, men bygger ikke; ingeniører utfører, men setter ikke strategi.
 
-**✅ Quick Actions:**
-- Define domain-specific [custom agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents) with MCP tool boundaries
-- Encapsulate tech stack knowledge and guidelines per mode
-- Define the most appropriate [LLM model](https://code.visualstudio.com/docs/copilot/customization/custom-agents#_custom-agent-example) for your chat mode like `Claude Sonnet 4`
-- Configure secure [MCP tool access](https://code.visualstudio.com/docs/copilot/customization/custom-agents#_custom-agent-example) to prevent cross-domain security breaches
+**✅ Hurtighandlinger:**
+- Definer domenespesifikke [tilpassede agenter](https://code.visualstudio.com/docs/copilot/customization/custom-agents) med MCP-verktøygrenser
+- Kapsle inn kunnskap og retningslinjer per modus
+- Velg mest passende [LLM-modell](https://code.visualstudio.com/docs/copilot/customization/custom-agents#_custom-agent-example) for modusen, f.eks. `Claude Sonnet 4`
+- Konfigurer sikker [MCP-verktøytilgang](https://code.visualstudio.com/docs/copilot/customization/custom-agents#_custom-agent-example) for å hindre sikkerhetsbrudd på tvers av domener
 
-> 💡 **Security Through MCP Tool Boundaries**: Each chat mode receives only the specific MCP tools needed for their domain - preventing dangerous access escalation and cross-contamination. Like professional licensing, a planning mode can't execute destructive commands, and a frontend mode can't access backend databases.
+> 💡 **Sikkerhet gjennom MCP-verktøygrenser**: Hver chat-modus får bare MCP-verktøyene den trenger for sitt domene — dette hindrer farlig tilgangseskalering og krysskontaminasjon. Som profesjonell lisensiering kan en planleggingsmodus ikke kjøre destruktive kommandoer, og en frontend-modus kan ikke aksessere backend-databaser.
 
-### 🔧 Tools & Files:
+### 🔧 Verktøy og filer:
 ```
 .github/
 └── chatmodes/
-    ├── architect.chatmode.md             # Planning specialist - designs, cannot execute
-    ├── frontend-engineer.chatmode.md     # UI specialist - builds interfaces, no backend access
-    ├── backend-engineer.chatmode.md      # API specialist - builds services, no UI modification
-    └── technical-writer.chatmode.md      # Documentation specialist - writes docs, cannot run code
+    ├── architect.chatmode.md             # Planleggingsspesialist - designer, kan ikke utføre
+    ├── frontend-engineer.chatmode.md     # UI-spesialist - bygger grensesnitt, ingen backend-tilgang
+    ├── backend-engineer.chatmode.md      # API-spesialist - bygger tjenester, ingen UI-endringer
+    └── technical-writer.chatmode.md      # Dokumentasjonsspesialist - skriver docs, kan ikke kjøre kode
 ```
 
-### Example: MCP Tool Boundary Implementation
-Create your `.github/chatmodes/backend-engineer.chatmode.md` file:
+### Eksempel: MCP-verktøygrense-implementering
+Lag `.github/chatmodes/backend-engineer.chatmode.md`-filen:
 
 ```yaml
 ---
@@ -132,37 +132,37 @@ You master the backend of this project thanks to you having read all [the backen
 - **CANNOT**: Modify client-side assets
 ```
 
-### Security & Professional Boundaries:
-- **Architect mode**: Research tools only - **cannot execute destructive commands or modify production code**
-- **Frontend Engineer mode**: UI development tools only - **cannot access databases or backend services** 
-- **Backend Engineer mode**: API and database tools only - **cannot modify user interfaces or frontend assets**
-- **Technical Writer mode**: Documentation tools only - **cannot run code, deploy, or access sensitive systems**
+### Sikkerhet og profesjonelle grenser:
+- **Arkitektmodus**: Kun research-verktøy - **kan ikke kjøre destruktive kommandoer eller endre produksjonskode**
+- **Frontend Engineer-modus**: Kun UI-verktøy - **kan ikke aksessere databaser eller backend-tjenester** 
+- **Backend Engineer-modus**: Kun API- og databaseverktøy - **kan ikke endre brukergrensesnitt eller frontend-ressurser**
+- **Technical Writer-modus**: Kun dokumentasjonsverktøy - **kan ikke kjøre kode, deploye eller aksessere sensitive systemer**
 
-*Like real-world professional licenses, each mode operates within its area of competence and cannot overstep into dangerous territory.*
+*Som profesjonelle lisenser opererer hver modus innenfor sitt kompetanseområde og kan ikke trå inn i farlige områder.*
 
-**⚠️ Checkpoint:** Each mode has clear boundaries and tool restrictions
+**⚠️ Sjekkpunkt:** Hver modus har klare grenser og verktøyrestriksjoner
 
-## Agentic Workflows {#c-agentic-workflows}
+## Agentiske arbeidsflyter {#c-agentic-workflows}
 
-Custom Agents create the safety boundaries, but you still need efficient ways to execute complete development processes. **Agentic Workflows** are implemented as reusable `.prompt.md` files that orchestrate all your primitives into systematic, end-to-end processes.
+Tilpassede agenter skaper sikkerhetsgrensene, men du trenger fortsatt effektive måter å gjennomføre komplette utviklingsprosesser. **Agentiske arbeidsflyter** implementeres som gjenbrukbare `.prompt.md`-filer som orkestrerer alle primitivene dine til systematiske, ende-til-ende prosesser.
 
-**✅ Quick Actions:**
-- Create [`.prompt.md` files](https://code.visualstudio.com/docs/copilot/customization/prompt-files) for complete development processes
-- Build in mandatory human validation points
-- Design workflows for both local execution and async delegation
+**✅ Hurtighandlinger:**
+- Opprett [`.prompt.md`-filer](https://code.visualstudio.com/docs/copilot/customization/prompt-files) for komplette utviklingsprosesser
+- Bygg inn obligatoriske menneskelige valideringspunkter
+- Design arbeidsflyter for både lokal kjøring og asynkron delegering
 
-> 💡 **Agentic Workflows**: These `.prompt.md` files are your complete systematic processes that combine all primitives (instructions, modes, specs, context) into repeatable workflows that can be executed locally or delegated to async agents.
+> 💡 **Agentiske arbeidsflyter**: Disse `.prompt.md`-filene er fullstendige, systematiske prosesser som kombinerer alle primitiver (instrukser, moduser, spesifikasjoner, kontekst) til repeterbare arbeidsflyter som kan kjøres lokalt eller delegeres til asynkrone agenter.
 
-### 🔧 Tools & Files:
+### 🔧 Verktøy og filer:
 ```
 .github/prompts/
-├── code-review.prompt.md           # With validation checkpoints
-├── feature-spec.prompt.md          # Spec-first methodology
-└── async-implementation.prompt.md  # GitHub Coding Agent delegation
+├── code-review.prompt.md           # Med valideringssjekkpunkter
+├── feature-spec.prompt.md          # Spec-first-metodikk
+└── async-implementation.prompt.md  # GitHub Coding Agent-delegering
 ```
 
-### Example: Complete Agentic Workflow
-Create your `.github/prompts/feature-spec.prompt.md` file:
+### Eksempel: Komplett agentisk arbeidsflyt
+Lag `.github/prompts/feature-spec.prompt.md`-filen:
 
 ```markdown
 ---
@@ -194,32 +194,32 @@ Create implementation with:
 Confirm: Architecture alignment, test strategy, and breaking change impact.
 ```
 
-**⚠️ Checkpoint:** Prompts include explicit validation gates
+**⚠️ Sjekkpunkt:** Prompts inneholder eksplisitte valideringsporter
 
-## Specification Templates {#d-specification-templates}
+## Spesifikasjonsmaler {#d-specification-templates}
 
-The final piece of your foundation addresses the gap between planning and implementation. Specification templates transform high-level ideas into implementation-ready blueprints that work consistently whether executed by humans or AI agents.
+Den siste brikken i fundamentet ditt adresserer gapet mellom planlegging og implementering. Spesifikasjonsmaler forvandler idéer på høyt nivå til implementeringsklare blåkopier som fungerer konsistent enten de utføres av mennesker eller AI-agenter.
 
-These `.spec.md` templates are the foundation of **spec-driven team workflows**. When you scale to team contexts (see [Team & Enterprise Scale](../team-adoption/)), product owners use these templates during sprint planning to create explicit, agent-executable specifications. [Spec-Kit](https://github.com/github/spec-kit) provides `/speckit.specify` commands that generate these files following the constitution → specify → plan → tasks → implement pattern, but understanding the underlying template structure gives you flexibility to customize for your team's needs.
+Disse `.spec.md`-malene er grunnlaget for **spec-drevne teamarbeidsflyter**. Når du skalerer til team (se [Team & Enterprise Scale](../team-adoption/)), bruker produkteiere disse malene i sprintplanlegging for å lage eksplisitte, agent-kjørbare spesifikasjoner. [Spec-Kit](https://github.com/github/spec-kit) tilbyr `/speckit.specify`-kommandoer som genererer disse filene etter mønsteret constitution → specify → plan → tasks → implement, men å forstå den underliggende malstrukturen gir deg fleksibilitet til å tilpasse til teamets behov.
 
-**✅ Quick Actions:**
-- Create standardized [`.spec.md` templates](https://docs.github.com/en/copilot/copilot-chat/copilot-chat-cookbook) for feature specifications
-- Build implementation-ready blueprints with validation criteria
-- Design for deterministic handoff between planning and execution phases
+**✅ Hurtighandlinger:**
+- Lag standardiserte [`.spec.md`-maler](https://docs.github.com/en/copilot/copilot-chat/copilot-chat-cookbook) for funksjonsspesifikasjoner
+- Bygg implementeringsklare blåkopier med valideringskriterier
+- Design for deterministisk overlevering mellom planleggings- og utførelsesfaser
 
-> 💡 **Bridge Primitive**: Specification files transform planning-phase thinking into implementation-ready artifacts that work reliably across different executors (human or AI).
+> 💡 **Bro-primitiv**: Spesifikasjonsfiler transformerer planleggingsfasens tenkning til implementeringsklare artefakter som fungerer pålitelig på tvers av ulike utførere (menneske eller AI).
 
-### 🔧 Tools & Files:
+### 🔧 Verktøy og filer:
 ```
 .github/specs/
-├── feature-template.spec.md        # Standard feature specification template
-├── api-endpoint.spec.md           # API-specific specification template
-└── component.spec.md              # UI component specification template
+├── feature-template.spec.md        # Standard mal for funksjonsspesifikasjon
+├── api-endpoint.spec.md           # API-spesifikk spesifikasjonsmal
+└── component.spec.md              # Spesifikasjonsmal for UI-komponent
 ```
 
-### Example: Implementation-Ready Specification
+### Eksempel: Implementeringsklar spesifikasjon
 
-Create a `.github/specs/jwt-auth.spec.md` file:
+Lag en `.github/specs/jwt-auth.spec.md`-fil:
 
 ```markdown
 # Feature: User Authentication System
@@ -255,24 +255,24 @@ Implement middleware-based authentication with token validation and refresh capa
 - [ ] Implementation ready for assignment
 ```
 
-**⚠️ Checkpoint:** Specifications are implementation-ready before delegation
+**⚠️ Sjekkpunkt:** Spesifikasjoner er implementeringsklare før delegering
 
 ---
 
-## Create Your First Skill {#e-context-organization--discovery}
+## Lag din første Skill {#e-context-organization--discovery}
 
-Once you've developed useful patterns—instructions, prompts, or workflows that could benefit other projects—it's time to package them as a **Skill** for distribution and reuse.
+Når du har utviklet nyttige mønstre — instrukser, prompts eller arbeidsflyter som kan gagne andre prosjekter — er det tid for å pakke dem som en **Skill** for distribusjon og gjenbruk.
 
-Skills have one key file:
-- **SKILL.md** (required): Tells agents *what* this Skill does and *when* to use it
+Skills har én nøkkelfil:
+- **SKILL.md** (obligatorisk): Forteller agentene *hva* Skill-en gjør og *når* den skal brukes
 
-**✅ Quick Actions:**
-- Identify a reusable agent capability from your project
-- Create a Skill package by creating a folder with the skill name under `.github/skills`
-- Write the SKILL.md discovery file inside it
-- Test locally, then push to GitHub for sharing
+**✅ Hurtighandlinger:**
+- Identifiser en gjenbrukbar agentkapabilitet i prosjektet
+- Lag en Skill-pakke ved å opprette en mappe med skill-navn under `.github/skills`
+- Skriv SKILL.md discovery-filen i mappen
+- Test lokalt, og push deretter til GitHub for deling
 
-### Example: SKILL.md for Agent Discovery
+### Eksempel: SKILL.md for agentoppdagelse
 
 ```markdown
 ---
@@ -299,40 +299,40 @@ Build accessible, type-safe forms in React.
 npm install react-hook-form @hookform/resolvers zod
 ```
 
-**⚠️ Checkpoint:** Your patterns are now packaged and shareable with the community
+**⚠️ Sjekkpunkt:** Mønstrene dine er nå pakket og kan deles med fellesskapet
 
 ---
 
-## Quick Start Checklist
+## Hurtigstartsjekkliste
 
-With Skills and primitives in place, you now have a complete foundation for systematic AI development. The checklist below walks through the implementation sequence.
+Med Skills og primitiver på plass har du nå et komplett fundament for systematisk AI-utvikling. Sjekklisten under guider deg gjennom implementeringsrekkefølgen.
 
-### Conceptual Foundation
-1. **[ ]** Understand **Markdown Prompt Engineering** principles (semantic structure + precision + tools)
-2. **[ ]** Grasp **Context Engineering** fundamentals (context window optimization + session strategy)
-3. **[ ]** Understand **Skills vs Primitives** (Skills distribute; primitives are internal or local)
+### Konseptuelt grunnlag
+1. **[ ]** Forstå prinsippene for **Markdown Prompt Engineering** (semantisk struktur + presisjon + verktøy)
+2. **[ ]** Forstå grunnleggende **Context Engineering** (kontekstvinduoptimalisering + øktstrategi)
+3. **[ ]** Forstå **Skills vs Primitiver** (Skills distribueres; primitiver er interne eller lokale)
 
-### Skills Setup
-4. **[ ]** Install [APM](https://github.com/microsoft/apm) for Skills management
-5. **[ ]** Install relevant Skills for your tech stack: `apm install owner/skill-name`
+### Skills-oppsett
+4. **[ ]** Installer [APM](https://github.com/microsoft/apm) for Skills-håndtering
+5. **[ ]** Installer relevante Skills for din teknologistakk: `apm install owner/skill-name`
 
-### Local Primitives
-6. **[ ]** Create [`.github/copilot-instructions.md`](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilot-instructionsmd-file) with project-specific guidelines
-7. **[ ]** Set up domain-specific [`.instructions.md` files](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-instructionsmd-files) with `applyTo` patterns
-8. **[ ]** Configure [custom agents](https://code.visualstudio.com/docs/copilot/customization/custom-agents) for your tech stack domains
-9. **[ ]** Create your first [`.prompt.md` Agentic Workflow](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental)
-10. **[ ]** Build your first `.spec.md` template for feature specifications
+### Lokale primitiver
+6. **[ ]** Lag [`.github/copilot-instructions.md`](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilot-instructionsmd-file) med prosjektspecifikke retningslinjer
+7. **[ ]** Sett opp domenespesifikke [`.instructions.md`-filer](https://code.visualstudio.com/docs/copilot/copilot-customization#_use-instructionsmd-files) med `applyTo`-mønstre
+8. **[ ]** Konfigurer [tilpassede agenter](https://code.visualstudio.com/docs/copilot/customization/custom-agents) for domenene i teknologistakken
+9. **[ ]** Lag din første [`.prompt.md` Agentic Workflow](https://code.visualstudio.com/docs/copilot/copilot-customization#_prompt-files-experimental)
+10. **[ ]** Bygg din første `.spec.md`-mal for funksjonsspesifikasjoner
 
-### Scale & Share
-11. **[ ]** Package reusable patterns as Skills: `apm init skill`
-12. **[ ]** Practice spec-first workflow with session splitting
+### Skaler og del
+11. **[ ]** Pakk gjenbrukbare mønstre som Skills: `apm init skill`
+12. **[ ]** Praktiser spec-first-arbeidsflyt med øktdeling
 
-## What's Next?
+## Hva nå?
 
-**Foundation Complete?** You've installed Skills and built local primitives. Continue to [Tooling](../tooling/) to understand the infrastructure that makes these scale—context compilation, Skills composition, and the package management that enables everything that follows.
+**Fundamentet på plass?** Du har installert Skills og bygget lokale primitiver. Fortsett til [Verktøy](../tooling/) for å forstå infrastrukturen som får dette til å skalere — kontekstkompilering, Skills-komposisjon og pakkestyringen som muliggjør alt videre.
 
-**Want to understand the disciplines?** Return to [The Practice](../concepts/) for deeper understanding of how techniques implement ARIELLE constraints.
+**Vil du forstå disiplinene?** Gå tilbake til [Praksisen](../concepts/) for dypere forståelse av hvordan teknikkene implementerer ARIELLE-begrensningene.
 
-**Ready to jump ahead?** After Tooling, [Agent Delegation](../agent-delegation/) covers execution strategies, and [Team & Enterprise Scale](../team-adoption/) shows organizational implementation.
+**Klar til å hoppe videre?** Etter Verktøy dekker [Agentdelegasjon](../agent-delegation/) utførelsesstrategier, og [Team & Enterprise Scale](../team-adoption/) viser organisatorisk implementering.
 
-*You now have Skills installed, local primitives configured, and understand how to package agent capabilities for reuse. The next step is understanding the infrastructure that makes these primitives executable, shareable, and production-ready.*
+*Du har nå Skills installert, lokale primitiver konfigurert, og forstår hvordan du pakker agentkapabiliteter for gjenbruk. Neste steg er å forstå infrastrukturen som gjør disse primitivene kjørbare, delbare og produksjonsklare.*
