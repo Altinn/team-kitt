@@ -1,0 +1,22 @@
+{
+  "name": "Support Copilot",
+  "description": "Answers internal support questions, retrieves order context, and escalates unresolved issues to a human team.",
+  "version": "1.0.0",
+  "provider": { "organization": "Digdir", "url": "https://www.digdir.no" },
+  "supportedInterfaces": [
+    { "url": "https://agents.digdir.no/support", "protocol": "json-rpc", "version": "1.0" }
+  ],
+  "capabilities": { "streaming": true, "pushNotifications": false },
+  "defaultInputModes": ["text/plain"],
+  "defaultOutputModes": ["text/plain", "application/json"],
+  "skills": [
+    {
+      "id": "resolve-support-request",
+      "name": "Resolve support request",
+      "description": "Classify, resolve or escalate a support request within a single task boundary.",
+      "tags": ["support", "triage"],
+      "examples": ["Jeg får ikke logget inn i KI Hub", "Hvordan ber jeg om tilgang?"]
+    }
+  ],
+  "securitySchemes": { "oauth": { "type": "oauth2" } }
+}

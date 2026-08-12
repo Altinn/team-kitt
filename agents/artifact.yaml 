@@ -1,0 +1,18 @@
+id: digdir.support-copilot
+type: agent
+name: Support Copilot
+version: 1.0.0
+description: Svarer på interne supportspørsmål og eskalerer uløste saker til et menneske.
+owner:
+  team: AI Enablement
+  contact: ai-team@digdir.no
+source:
+  provider: github
+  repository: digdir/DITT-REPO-NAVN
+  path: agents/support-copilot
+tags:
+  - support
+  - agent
+visibility: internal
+lifecycle:
+  status: experimental
