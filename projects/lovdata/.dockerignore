@@ -8,5 +8,8 @@ coverage/
 docs/plan/
 data/raw/
 data/extracted/
-data/normalized/
+data/normalized/lovtidend-avd1/
+data/normalized/manifest.previous.json
+data/database.db
+data/database.vercel-current.db
 data/database.db-*
