@@ -18,6 +18,9 @@ RUN npm ci
 COPY tsconfig.json tsconfig.build.json ./
 COPY src ./src
 RUN npm run build
+COPY scripts/build-db.ts ./scripts/build-db.ts
+COPY data/normalized ./data/normalized
+RUN npm run build:db
 RUN npm prune --omit=dev && npm cache clean --force
 
 FROM node:24-bookworm-slim AS runtime
@@ -38,7 +41,7 @@ RUN apt-get update \
 COPY package.json package-lock.json ./
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/dist ./dist
-COPY data/database.db ./data/database.db
+COPY --from=builder /app/data/database.db ./data/database.db
 
 USER node
 

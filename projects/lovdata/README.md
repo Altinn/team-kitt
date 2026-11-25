@@ -229,10 +229,12 @@ curl http://localhost:3000/mcp
 Docker hosting:
 
 ```bash
-npm run build:db
 docker build -t digdir-norwegian-law-mcp .
 docker run --rm -p 3000:3000 digdir-norwegian-law-mcp
 ```
+
+The Docker build creates the bundled SQLite database from the checked-in
+current laws and central regulations.
 
 In another terminal:
 
