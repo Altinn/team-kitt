@@ -33,7 +33,7 @@ jobs:
       - name: Check container health
         run: |
           docker run --detach --name lovdata-smoke --publish 127.0.0.1:3000:3000 "${IMAGE}:${GITHUB_SHA}"
-          curl --fail --silent --show-error --retry 10 --retry-connrefused --retry-delay 2 \
+          curl --fail --silent --show-error --retry 10 --retry-all-errors --retry-delay 2 \
             http://127.0.0.1:3000/health
       - name: Show container logs on failure
         if: failure()
